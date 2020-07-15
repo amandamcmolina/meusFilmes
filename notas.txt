@@ -1,0 +1,45 @@
+* pop-up de cadastro
+* pop-up de login
+* págin admin
+* pagina visitante
+* botão adicionar mais um filme
+* banco de dados com informações sobre os filmes
+
+
+
+
+**Banco de dados
+    - Filmes  
+        id  
+        título
+        ano 
+        diretor
+        descricao
+        comentário
+        img
+        gêneros
+        nota
+        data de postagem
+    
+    - Gênero
+        id
+        nome
+
+    - Filmes-Gêneros
+        id_filme
+        id_genero
+
+    -Atores
+        id
+        nome
+    
+    - Filmes-Atores
+        id_filme
+        id_ator
+
+    - Diretores
+        id
+        nome
+
+    
+

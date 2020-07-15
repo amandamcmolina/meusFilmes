@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Filmes</title>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="cabecalho">
+        <div class="entrar">
+            <a class="login" id="myBtn" href="#">Cadastrar</a>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form class="userRegisterForm" action="">
+                        <div class="titulocadastro">
+                            <h3>Cadastro do Usuário</h3><br>
+                        </div>
+                        <label for="name">Username</label><br>
+                        <input type="text" name="name" id="name"><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" name="email" id="email"><br>
+                        <label for="password">Senha</label><br>
+                        <input type="password" name="password" id="password"><br>
+                        <label for="passwordCheck">Confirmar Senha</label><br>
+                        <input type="password" name="passwordCheck" id="passwordCheck"><br>
+                        <button class="btn-userRegister">Confirmar</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <a class="login" id="myBtnLogin" href="#">Login</a>
+
+            <div id="myModalLogin" class="modalLogin">
+                <div class="modal-contentLogin">
+                    <span class="closeLogin">&times;</span>
+                    <form class="userRegisterForm" action="">
+                        <div class="titulocadastro">
+                            <h3>Cadastro do Usuário</h3><br>
+                        </div>
+                        <label for="name">Username ou email</label><br>
+                        <input type="text" name="name" id="name"><br>
+                        <label for="password">Senha</label><br>
+                        <input type="password" name="password" id="password"><br>
+                        <button class="btn-userRegister">Entrar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <h1>Meus Filmes</h1>
+
+        <hr>
+        <p>Minha lista personaliza de filmes</p>
+    </div>
+
+    <main>
+        <div class="addPrimeiroFilme">
+            <input type="button" class="addFilme" value="Adicionar filme">
+        </div>
+        <section class="movieItemRegister">
+            <form action="">
+                <label for="titulo">Título do Filme:</label><br>
+                <input type="text" id="titulo" name="titulo"><br>
+                <label for="descricao">Descrição:</label><br>
+                <textarea name="descricao" id="descricao" cols="30" rows="3"></textarea><br>
+                <label for="genero">Gênero:</label><br>
+                <select name="genero">
+                    <option value="select"></option>
+                    <option value="romance">Romance</option>
+                    <option value="terror">Terror</option>
+                    <option value="comedia">Comédia</option>
+                </select><br>
+                <label for="atoresPrincipais">Atores Principais:</label><br>
+                <input type="atoresPrincipais" id="atoresPrincipais" name="atoresPrincipais"><br>
+                <label for="diretor">Diretor:</label><br>
+                <input type="text" id="diretor" name="diretor"><br>
+                <label for="ano">Ano de estreia:</label><br>
+                <input type="number" id="ano" name="ano"><br>
+                <label for="comentario">Comentário:</label><br>
+                <textarea name="comentario" id="comentario" cols="30" rows="3"></textarea><br>
+                <label for="note">Nota:</label><br>
+                <input type="number" id="nota" name="nota"><br>
+                <label for="capa">Adicione uma capa para o filme:</label><br>
+                <input type="file"><br>
+                <button>Cadastrar</button>
+            </form>
+        </section>
+        <section class="movieItem">
+            <img src="img/filmeUm.jpg" alt="dirtyDancing">
+            <p class="atualizacao">15/07/2020</p>
+            <h2>Dirty Dancing</h2>
+            <p class="year">1987</p>
+            <p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra seu
+                verdadeiro amor em um dançarino. No meio de muita dança e amor, eles precisam passar por obstáculos
+                sociais para finalmente se encontrarem como um casal. </p>
+            <p class="genre"> <a href="#"> Romance</a></p>
+            <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
+            <p class="director">Direção por: Emile Ardolino</p>
+            <p class="coments"> <img src="img/plus.png" alt="Comentário Pessoal">Top 10 dos meus filmes preferidos</p>
+            <p class="grade"> Nota: 10</p>
+            <input class="delete" type="button" value="editar">
+            <input class="edit" type="button" value="excluir">
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+    <script src="js/cadastro.js"></script>
+    
+
+</body>
+
+</html>

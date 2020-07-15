@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #EEE;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.cabecalho{
+    background-color: rgb(197, 182, 182);
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    border-radius: 10px;
+}
+
+.cabecalho p{
+    margin-top: 30px;
+}
+
+.entrar{
+    text-align: end;
+    padding-right: 20px;
+}
+
+.login{
+    text-decoration: none;
+    color: white;
+    padding-left: 12px;
+}
+
+
+/* POP UP - CADASTRAR LOGIN */
+/* The Modal (background) */
+.modal, .modalLogin {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+.modal-content, .modal-contentLogin{
+background-color: white;
+margin: auto;
+padding: 15px;
+width: 30%;
+border-radius: 15px;
+}
+
+
+.close, .closeLogin {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.close:hover, .close:focus, .closeLogin:hover, .closeLogin:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+.userRegisterForm{
+    text-align: center;
+    font-weight: bold;
+    background-color: whit#EEE;
+    border-radius: 15px 15px 15px 15px;
+    padding-bottom: 12px;
+}
+
+.userRegisterForm input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    padding: 5px;
+    border: solid 1px rgb(161, 156, 156);
+    border-radius: 4px;
+}
+
+.titulocadastro{
+    background-color: rgb(197, 182, 182);
+    padding-top: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 15px 15px 0 0;
+}
+
+.btn-userRegister{
+    background-color: rgb(86, 86, 248);
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+
+.addPrimeiroFilme{
+
+    text-align: center;
+}
+
+.addFilme{
+    background-color: rgb(86, 86, 248);
+    font-family: 'Epilogue', sans-serif;
+}
+
+.movieItemRegister{
+    background-color: white;
+    width: 30%;
+    margin: 0 auto;
+    padding: 15px 0 15px 0px;
+    color: rgb(38, 38, 90);
+    font-weight: bold;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.movieItemRegister input, .movieItemRegister textarea, .movieItemRegister select{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1px rgb(161, 156, 156);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.movieItemRegister button, .addFilme{
+    margin-top: 20px;
+    background-color: rgb(86, 86, 248);
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+
+.movieItemRegister button:hover, .addFilme:hover, .edit:hover, .delete:hover, .btn-userRegister:hover{
+    background-color: rgb(27, 27, 117);
+    cursor: pointer;
+}
+
+.movieItem{
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.movieItem img{
+    width: 100%;
+}
+
+
+.atualizacao{
+    font-size: 12px;
+    text-align: end;
+    font-style: italic;
+}
+
+h2{
+    margin: 10px;
+}
+
+.movieDescription{
+    text-align: justify;
+    font-size: 18px;
+}
+
+.genre{
+    font-family: cursive;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.genre a{
+    text-decoration: none;
+    color: black;
+}
+
+.grade{
+    font-weight: bold;
+}
+
+.coments{
+    font-size: 18px;
+    color: rgb(0, 132, 255);  
+}
+
+.coments img{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.edit, .delete{
+    background-color: rgb(86, 86, 248);
+    padding: 7px;
+    border-radius: 5px;
+    color: white;
+}
+
+.movieItem p{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1030px ) {
+    .cabecalho{
+        width: 55%;
+    }
+    .entrar{
+        text-align: center;
+        font-size: 1.3em;
+    } 
+    .movieItemRegister{
+        width: 60%;
+    }
+    .movieItem{
+        width: 60%;;
+    }
+
+    .entrar{
+        margin-bottom: 15px;
+    }
+
+    .modal-content{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 550px ) {
+    .cabecalho{
+        width: 75%;
+    }
+    .entrar{
+        text-align: center;
+        font-size: 1.3em;
+    } 
+    .movieItemRegister{
+        width: 80%;
+    }
+    .movieItem{
+        width: 80%;;
+    }
+
+    .entrar{
+        margin-bottom: 15px;
+    }
+
+    .modal-content{
+        width: 60%;
+    }
+}
