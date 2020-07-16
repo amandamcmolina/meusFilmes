@@ -16,16 +16,21 @@ spanLogin.onclick = function () {
     modalLogin.style.display = "none";
 }
 
-window.onkeydown = function evento( event ) {
+var closeByEscLogin= function evento( event ) {
     if ( event.keyCode == 27 ) {
         modalLogin.style.display = "none";
     }
 };
 
+window.addEventListener("keydown", closeByEscLogin);
+
 // When the user clicks anywhere outside of the modal, close it
 
-window.onclick = function evento(event) {
+var closeByClickLogin = function evento(event) {
     if (event.target == modalLogin) {
       modalLogin.style.display = "none";
     }
   }
+
+window.addEventListener("click", closeByClickLogin);
+
