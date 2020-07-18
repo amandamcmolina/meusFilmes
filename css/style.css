@@ -26,10 +26,16 @@ body{
     padding-right: 20px;
 }
 
+
+
 .login{
     text-decoration: none;
     color: white;
     padding-left: 12px;
+}
+
+.login:hover, .login:focus{
+    color: rgb(27, 27, 117);
 }
 
 
@@ -56,7 +62,7 @@ margin: auto;
 padding: 15px;
 margin-bottom: 100px;
 width: 30%;
-border-radius: 15px;
+border-radius: 8px;
 }
 
 .modalMovie{
@@ -127,6 +133,7 @@ border-radius: 15px;
 .addFilme{
     background-color: rgb(86, 86, 248);
     font-family: 'Epilogue', sans-serif;
+    margin-bottom: 12px;
 }
 
 .movieItemRegister{
@@ -159,8 +166,9 @@ border-radius: 15px;
     box-shadow: 3px 3px 3px rgba(128, 124, 124, 0.77);
 }
 
-.movieItem{
-    width: 30%;
+.card-movieItem{
+    width: 22%;
+    /* height: 480px; */
     text-align: center;
     margin: 0 auto;
     background-color: white;
@@ -170,7 +178,8 @@ border-radius: 15px;
     box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
 }
 
-.movieItem img{
+
+.card-movieItem img{
     width: 100%;
 }
 
@@ -185,15 +194,19 @@ h2{
     margin: 10px;
 }
 
+.year{
+    font-size: 16px;
+}
+
 .movieDescription{
     text-align: justify;
-    font-size: 18px;
+    font-size: 14px;
 }
+
+
 
 .genre{
     font-family: cursive;
-    margin-top: 10px;
-    margin-bottom: 5px;
 }
 
 .genre a{
@@ -201,12 +214,16 @@ h2{
     color: black;
 }
 
+.genre a:hover{
+    color: rgb(27, 27, 117);
+}
+
 .grade{
     font-weight: bold;
 }
 
 .coments{
-    font-size: 18px;
+    font-size: 15px;
     color: rgb(0, 132, 255);  
 }
 
@@ -223,8 +240,8 @@ h2{
     
 }
 
-.movieItem p{
-    margin-top: 10px;
+.card-movieItem p{
+    margin-top: 6px;
     margin-bottom: 5px;
 }
 
@@ -239,7 +256,7 @@ h2{
     .movieItemRegister{
         width: 60%;
     }
-    .movieItem{
+    .card-movieItem{
         width: 60%;;
     }
 
@@ -262,9 +279,11 @@ h2{
     } 
     .movieItemRegister{
         width: 80%;
+        
     }
-    .movieItem{
-        width: 80%;;
+    .card-movieItem{
+        width: 80%;
+        
     }
 
     .entrar{

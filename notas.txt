@@ -1,9 +1,11 @@
-* pop-up de cadastro
-* pop-up de login
+
 * págin admin
 * pagina visitante
 * botão adicionar mais um filme
 * banco de dados com informações sobre os filmes
+
+* 1°  Json Com JAVASCRIPT - Treino de front
+* 2°  Php + banco de dados - Treino back
 
 
 

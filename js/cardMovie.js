@@ -12,7 +12,7 @@ var ano = document.getElementsByClassName('year')[0];
     
 
 var descricao = document.getElementsByClassName('movieDescription')[0];
-descricao.textContent = "O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra seu verdadeiro amor em um dançarino. No meio de muita dança e amor, eles precisam passar por obstáculos sociais para finalmente se encontrarem como um casal.";  
+descricao.textContent = "O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra seu verdadeiro amor em um dançarino. No meio de muita dança e amor, eles precisam passar por obstáculos sociais.";  
 
 
 var atores = document.getElementsByClassName('principalsActors')[0];
