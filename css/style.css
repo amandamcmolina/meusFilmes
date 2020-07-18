@@ -156,6 +156,7 @@ border-radius: 15px;
 .movieItemRegister button:hover, .addFilme:hover, .edit:hover, .delete:hover, .btn-userRegister:hover{
     background-color: rgb(27, 27, 117);
     cursor: pointer;
+    box-shadow: 3px 3px 3px rgba(128, 124, 124, 0.77);
 }
 
 .movieItem{
@@ -166,6 +167,7 @@ border-radius: 15px;
     padding: 15px;
     border-radius: 20px;
     margin-bottom: 20px;
+    box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
 }
 
 .movieItem img{
@@ -218,6 +220,7 @@ h2{
     padding: 7px;
     border-radius: 5px;
     color: white;
+    
 }
 
 .movieItem p{
