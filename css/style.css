@@ -35,7 +35,7 @@ body{
 
 /* POP UP - CADASTRAR LOGIN */
 /* The Modal (background) */
-.modal, .modalLogin {
+.modal, .modalLogin, .modalMovie {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -50,23 +50,34 @@ body{
   }
   
   /* Modal Content */
-.modal-content, .modal-contentLogin{
+.modal-content, .modal-contentLogin, .modal-contentMovie{
 background-color: white;
 margin: auto;
 padding: 15px;
+margin-bottom: 100px;
 width: 30%;
 border-radius: 15px;
 }
 
+.modalMovie{
+    padding-top: 50px;
+}
 
-.close, .closeLogin {
+.modal-contentMovie{
+    height: 485px;
+    overflow-y: auto;
+    padding-top: 25px ;
+}
+
+
+.close, .closeLogin, .closeMovie {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-.close:hover, .close:focus, .closeLogin:hover, .closeLogin:focus {
+.close:hover, .close:focus, .closeLogin:hover, .closeLogin:focus, .closeMovie:hover, .closeMovie:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -119,22 +130,16 @@ border-radius: 15px;
 }
 
 .movieItemRegister{
-    background-color: white;
-    width: 30%;
-    margin: 0 auto;
-    padding: 15px 0 15px 0px;
+    text-align: center;
     color: rgb(38, 38, 90);
     font-weight: bold;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-    margin-top: 10px;
 }
+
 
 .movieItemRegister input, .movieItemRegister textarea, .movieItemRegister select{
     width: 80%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     border: solid 1px rgb(161, 156, 156);
     border-radius: 4px;
     padding: 5px;
