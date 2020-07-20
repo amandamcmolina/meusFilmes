@@ -18,7 +18,6 @@ spanMovie.onclick = function () {
 }
 
 var closeByClick3 = function (event) {
-    console.log("olá");
     if (event.target == modalMovie) {
         modalMovie.style.display = "none";
     }
@@ -26,7 +25,6 @@ var closeByClick3 = function (event) {
 
 //ESC
 var closeByEsc3 = function (event) {
-    console.log("Oi");
     if (event.keyCode == 27) {
         modalMovie.style.display = "none";
     }

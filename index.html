@@ -46,10 +46,10 @@
                         <div class="titulocadastro">
                             <h3>Login</h3><br>
                         </div>
-                        <label for="name">Username ou email</label><br>
-                        <input type="text" name="name" id="name"><br>
-                        <label for="password">Senha</label><br>
-                        <input type="password" name="password" id="password"><br>
+                        <label for="userName">Username ou email</label><br>
+                        <input type="text" name="userName" id="userName"><br>
+                        <label for="userPassword">Senha</label><br>
+                        <input type="Password" name="userPassword" id="userPassword"><br>
                         <button class="btn-userRegister">Entrar</button>
                     </form>
                 </div>
@@ -95,10 +95,12 @@
                     <input type="number" id="nota" name="nota"><br>
                     <label for="capa">Adicione uma capa para o filme:</label><br>
                     <input type="file"><br>
-                    <button>Salvar</button>
+                    <button class="btn-save" onclick="novaDirecao();">Salvar</button>
                 </form>
             </div>
         </section>
+
+        <h1 class="teste"></h1>
 
 
         <section class="card-movieItem">
@@ -119,10 +121,12 @@
         </section>
     </main>
 
+    
     <script src="js/cardMovie.js"></script>
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>
     <script src="js/addMovie.js"></script>
+    
     
     
 

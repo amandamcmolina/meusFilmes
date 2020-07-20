@@ -2,6 +2,7 @@
 
     class Movie
     {
+            
             public $titulo;
             public $descricao;
             public $atores;
@@ -12,6 +13,7 @@
 
         public function __construct($titulo, $descricao, $atores, $diretor, $anoEstreia, $comentario, $nota)
         {
+            
             $this->setTitulo($titulo);
             $this->setDescricao($descricao);
             $this->setAtores($atores);
