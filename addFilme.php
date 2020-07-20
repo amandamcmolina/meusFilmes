@@ -13,7 +13,6 @@
     
     
     $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota);
-    $movie = ["movieUm" => $novoFilme ];
     
     echo "<pre>";
     
@@ -21,7 +20,7 @@
     echo "<br>";
 
 
-    $json = json_encode($movie);
+    $json = json_encode($novoFilme);
     file_put_contents('movies.json', $json);
 
     header('location:index.html');

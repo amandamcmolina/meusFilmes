@@ -7,18 +7,18 @@
             public $descricao;
             public $atores;
             public $diretor;
-            public $anoEstreia;
+            public $ano;
             public $comentario;
             public $nota;
 
-        public function __construct($titulo, $descricao, $atores, $diretor, $anoEstreia, $comentario, $nota)
+        public function __construct($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota)
         {
             
             $this->setTitulo($titulo);
             $this->setDescricao($descricao);
             $this->setAtores($atores);
             $this->setDiretor($diretor);
-            $this->setAnoEstreia($anoEstreia);
+            $this->setAnoEstreia($ano);
             $this->setComentario($comentario);
             $this->setNota($nota);   
         }    
