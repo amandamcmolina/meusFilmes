@@ -10,9 +10,12 @@
     $ano = $_POST['ano'];
     $comentario = $_POST['comentario'];
     $nota = $_POST['nota'];
+    $genero = $_POST['genero'];
+
+    echo $genero;
     
     
-    $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota);
+    $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero);
     
     echo "<pre>";
     

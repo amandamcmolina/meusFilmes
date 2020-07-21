@@ -10,10 +10,11 @@
             public $ano;
             public $comentario;
             public $nota;
+            public $genero;
 
-        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota)
+        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero)
         {
-            $this->id;
+            $this->setId($id);
             $this->setTitulo($titulo);
             $this->setDescricao($descricao);
             $this->setAtores($atores);
@@ -21,8 +22,15 @@
             $this->setAno($ano);
             $this->setComentario($comentario);
             $this->setNota($nota);   
+            $this->setGenero($genero);
         }    
             
+
+        public function setId($id)
+        {
+            $this->id = $id;
+        }
+
         public function setTitulo($titulo)
         {
             $this->titulo = $titulo;
@@ -62,6 +70,11 @@
             //     throw new Exception("A nota deve estar entre 0 e 10.", 200);
             // }
             $this->nota = $nota;
+        }
+
+        public function setGenero($genero)
+        {
+            $this->genero = $genero;
         }
 
 

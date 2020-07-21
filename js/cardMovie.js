@@ -41,6 +41,9 @@ function readTextFile(file, callback) {
     var nota = document.getElementsByClassName('grade')[0];
         nota.textContent = dados.nota; 
 
+    var genre = document.getElementsByClassName('genre')[0];
+    genre.textContent = dados.genero; 
+
  });
 
 
