@@ -13,8 +13,8 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-    readTextFile("movies.json", function(text){
-        var dados = JSON.parse(text);
+    readTextFile("movies.json", function(json){
+        var dados = JSON.parse(json);
 
     var titulo = document.getElementsByClassName('tituloFinal')[0];
         titulo.textContent = dados.titulo;  
@@ -44,9 +44,17 @@ function readTextFile(file, callback) {
     var genre = document.getElementsByClassName('genre')[0];
     genre.textContent = dados.genero;
 
-    // var img = document.getElementsByClassName('img-capa2')[0];
-    // img.src = dados.capa;
+
+
+    ////////!!!!
+    var img = document.getElementsByClassName('img-capa')[0];
+    var 
+    if(dados.capa['name'] == ){
+        img.src = "img/filmeUm.jpg";
+    }
     
+    // var img = document.getElementsByClassName('img-capa')[0];
+    // img.src = "img/filmeUm.jpg";
     // var capa = document.getElementById('img-capa')[0];
     // var img = document.createElement("img");
     // img.src = dados.capa;
@@ -57,6 +65,9 @@ function readTextFile(file, callback) {
     // document.getElementsByClassName('img-capa').innerHTML= "<img src="+imagem+" />";
 
  });
+
+//  var img = document.getElementsByClassName('img-capa')[0];
+//     img.src = "img/filmeUm.jpg";
 
  
 

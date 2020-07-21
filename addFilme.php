@@ -29,6 +29,13 @@
     $json = json_encode($novoFilme);
     file_put_contents('movies.json', $json);
 
+    //Salvar img em pasta
+    
+    $capaSalva = $novoFilme->capa_tmp_name;
+    $capaNome = $novoFilme->capa_name;
+    $dir = 'capas/';
+    move_uploaded_file($capaSalva, $dir.$capaNome);
+
     header('location:index.html');
 
     
