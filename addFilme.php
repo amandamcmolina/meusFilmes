@@ -2,7 +2,7 @@
     
     include ('Movie.php');
     
-    // $id = rand(0, 100);
+    $id = rand(1, 100);
     $titulo = $_POST['titulo'];
     $descricao = $_POST['descricao'];
     $atores = $_POST['atoresPrincipais'];
@@ -12,7 +12,7 @@
     $nota = $_POST['nota'];
     
     
-    $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota);
+    $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota);
     
     echo "<pre>";
     

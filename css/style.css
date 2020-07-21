@@ -1,11 +1,11 @@
 *{
+    font-family: 'Epilogue', sans-serif;
     padding: 0;
     margin: 0;
 }
 
 body{
     background-color: #EEE;
-    font-family: 'Epilogue', sans-serif;
 }
 
 .cabecalho{
@@ -53,7 +53,7 @@ body{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
   
   /* Modal Content */
 .modal-content, .modal-contentLogin, .modal-contentMovie{
@@ -84,30 +84,31 @@ border-radius: 15px;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
+}
   
 .close:hover, .close:focus, .closeLogin:hover, .closeLogin:focus, .closeMovie:hover, .closeMovie:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
+}
 
 .userRegisterForm{
     text-align: center;
     font-weight: bold;
-    background-color: whit#EEE;
+    background-color:#EEE;
     border-radius: 15px 15px 15px 15px;
     padding-bottom: 12px;
 }
 
-.userRegisterForm input{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 80%;
+input, textarea, select{
+    border-radius: 4px;
     padding: 5px;
     border: solid 1px rgb(161, 156, 156);
-    border-radius: 4px;
+}
+
+.userRegisterForm input{
+    margin: 10px 0 10px 0;
+    width: 70%; 
 }
 
 .titulocadastro{
@@ -118,24 +119,18 @@ border-radius: 15px;
     border-radius: 15px 15px 0 0;
 }
 
-.btn-userRegister{
+.btn{
     background-color: rgb(86, 86, 248);
-    padding: 7px;
     border-radius: 5px;
     color: white;
+    padding: 7px;
 }
 
-
-
-
 .addPrimeiroFilme{
-
     text-align: center;
 }
 
-.addFilme{
-    background-color: rgb(86, 86, 248);
-    font-family: 'Epilogue', sans-serif;
+.btn-addFilme{
     margin-bottom: 12px;
 }
 
@@ -145,25 +140,16 @@ border-radius: 15px;
     font-weight: bold;
 }
 
-
 .movieItemRegister input, .movieItemRegister textarea, .movieItemRegister select{
     width: 80%;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    border: solid 1px rgb(161, 156, 156);
-    border-radius: 4px;
-    padding: 5px;
+    margin: 8px 0 8px 0;
 }
 
-.movieItemRegister button, .addFilme{
+.btn-addFilme{
     margin-top: 20px;
-    background-color: rgb(86, 86, 248);
-    padding: 7px;
-    border-radius: 5px;
-    color: white;
 }
 
-.movieItemRegister button:hover, .addFilme:hover, .edit:hover, .delete:hover, .btn-userRegister:hover{
+.btn:hover, .btn:focus{
     background-color: rgb(27, 27, 117);
     cursor: pointer;
     box-shadow: 3px 3px 3px rgba(128, 124, 124, 0.77);
@@ -173,20 +159,17 @@ border-radius: 15px;
     width: 22%;
     /* height: 480px; */
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto; /*alterar para flexbox*/
     background-color: white;
-    padding: 15px;
+    padding: 12px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
 }
 
-
-
 .card-movieItem img{
     width: 100%;
 }
-
 
 .atualizacao{
     font-size: 12px;
@@ -194,7 +177,7 @@ border-radius: 15px;
     font-style: italic;
 }
 
-h2{
+.testCard h2{
     margin: 10px;
 }
 
@@ -207,8 +190,6 @@ h2{
     font-size: 14px;
 }
 
-
-
 .genre{
     font-family: cursive;
 }
@@ -220,6 +201,7 @@ h2{
 
 .genre a:hover{
     color: rgb(27, 27, 117);
+    font-weight: bold;
 }
 
 .grade{
@@ -231,17 +213,9 @@ h2{
     color: rgb(0, 132, 255);  
 }
 
-.coments img{
-    width: 15px;
+.plus{
+    width: 20px!important;
     margin-right: 5px;
-}
-
-.edit, .delete{
-    background-color: rgb(86, 86, 248);
-    padding: 7px;
-    border-radius: 5px;
-    color: white;
-    
 }
 
 .card-movieItem p{

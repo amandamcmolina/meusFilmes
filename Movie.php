@@ -2,7 +2,7 @@
 
     class Movie
     {
-            
+            public $id;
             public $titulo;
             public $descricao;
             public $atores;
@@ -11,14 +11,14 @@
             public $comentario;
             public $nota;
 
-        public function __construct($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota)
+        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota)
         {
-            
+            $this->id;
             $this->setTitulo($titulo);
             $this->setDescricao($descricao);
             $this->setAtores($atores);
             $this->setDiretor($diretor);
-            $this->setAnoEstreia($ano);
+            $this->setAno($ano);
             $this->setComentario($comentario);
             $this->setNota($nota);   
         }    
@@ -43,12 +43,12 @@
             $this->diretor = $diretor;
         }
 
-        public function setAnoEstreia($anoEstreia) 
+        public function setAno($ano) 
         {
             // if($this->anoEstreia < 1800 || $this->anoEstreia > 2030){
             //     throw new Exception("Ano deve ter 4 caracteres.", 100);
             // }
-            $this->anoEstreia = $anoEstreia;
+            $this->ano = $ano;
         }
 
         public function setComentario($comentario)
