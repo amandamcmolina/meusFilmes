@@ -22,7 +22,6 @@ function readTextFile(file, callback) {
     var ano = document.getElementsByClassName('year')[0];
         ano.textContent = dados.ano;
         
-
     var descricao = document.getElementsByClassName('movieDescription')[0];
         descricao.textContent = dados.descricao;
 
@@ -43,14 +42,5 @@ function readTextFile(file, callback) {
         nota.textContent = dados.nota; 
 
  });
-
-
-
-
-
-function novaDirecao() {
-    window.location.href = "index.html";
-    console.log("funciona");
-}
 
 

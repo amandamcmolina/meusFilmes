@@ -1,9 +1,6 @@
-//LOGIN
+//MODAL CADASTRO
 var modal = document.getElementById("myModal");
-
 var btn = document.getElementById("myBtn");
-
-
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
@@ -16,6 +13,7 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
+// clicar no modal
 var closeByClick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";

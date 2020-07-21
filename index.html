@@ -75,13 +75,14 @@
                     <input type="text" id="titulo" name="titulo"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3"></textarea><br>
+
+
                     <label for="genero">Gênero:</label><br>
-                    <select name="genero">
+                    <select name="genero" id="selecao-generos">
                         <option value="select"></option>
-                        <option value="romance">Romance</option>
-                        <option value="terror">Terror</option>
-                        <option value="comedia">Comédia</option>
                     </select><br>
+
+
                     <label for="atoresPrincipais">Atores Principais:</label><br>
                     <input type="atoresPrincipais" id="atoresPrincipais" name="atoresPrincipais"><br>
                     <label for="diretor">Diretor:</label><br>
@@ -94,7 +95,7 @@
                     <input type="number" id="nota" name="nota"><br>
                     <label for="capa">Adicione uma capa para o filme:</label><br>
                     <input type="file"><br>
-                    <button class=" btn btn-save" onclick="novaDirecao();">Salvar</button>
+                    <button class=" btn btn-save">Salvar</button>
                 </form>
             </div>
         </section>
@@ -120,7 +121,7 @@
         </section>
     </main>
 
-    
+    <script src="js/registerMovieSupport.js"></script>
     <script src="js/cardMovie.js"></script>
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>

@@ -1,10 +1,6 @@
-//LOGIN
+//MODAL - MOVIE
 var modalMovie = document.getElementById("myModalMovie");
-
 var btnMovie = document.getElementById("myBtnMovie");
-
-
-
 var spanMovie = document.getElementsByClassName("closeMovie")[0];
 
 // When the user clicks on the button, open the modal
