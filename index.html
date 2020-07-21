@@ -65,12 +65,12 @@
 
 
         <div class="addPrimeiroFilme">
-            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
+            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme" >
         </div>
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">
                 <span class="closeMovie">&times;</span>
-                <form action="addFilme.php" method="post">
+                <form action="addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
                     <input type="text" id="titulo" name="titulo"><br>
                     <label for="descricao">Descrição:</label><br>
@@ -79,7 +79,7 @@
 
                     <label for="genero">Gênero:</label><br>
                     <select name="genero" id="selecao-generos">
-                        <option value="select"></option>
+                        <option value=""></option>
                     </select><br>
 
 
@@ -94,7 +94,7 @@
                     <label for="note">Nota:</label><br>
                     <input type="number" id="nota" name="nota"><br>
                     <label for="capa">Adicione uma capa para o filme:</label><br>
-                    <input type="file"><br>
+                    <input type="file" name="capa"><br>
                     <button class=" btn btn-save">Salvar</button>
                 </form>
             </div>
@@ -105,12 +105,12 @@
 
         <section class="card-movieItem">
             <div class="testeCard">
-                <img src="img/filmeUm.jpg" alt="dirtyDancing">
+                <img class = "img-capa2" src="" alt="dirtyDancing"><div class="img-capa"></div>
                 <p class="atualizacao">15/07/2020</p>
                 <h2 class="tituloFinal"></h2>
                 <p class="year"></p>
                 <p class="movieDescription"></p>
-                <p class="genre"> <a href="#"> Romance</a></p>
+                <p class="genre"> <a href="#"></a></p>
                 <p class="principalsActors"></p>
                 <p class="director"></p>
                 <img class="plus"src="img/plus.png" alt="Comentário Pessoal"><p class="coments"> </p>

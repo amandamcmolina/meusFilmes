@@ -42,8 +42,24 @@ function readTextFile(file, callback) {
         nota.textContent = dados.nota; 
 
     var genre = document.getElementsByClassName('genre')[0];
-    genre.textContent = dados.genero; 
+    genre.textContent = dados.genero;
+
+    // var img = document.getElementsByClassName('img-capa2')[0];
+    // img.src = dados.capa;
+    
+    // var capa = document.getElementById('img-capa')[0];
+    // var img = document.createElement("img");
+    // img.src = dados.capa;
+    // capa.appendChild(img); 
+    
+
+    // var imagem = localStorage.getItem('capa');
+    // document.getElementsByClassName('img-capa').innerHTML= "<img src="+imagem+" />";
 
  });
+
+ 
+
+ 
 
 

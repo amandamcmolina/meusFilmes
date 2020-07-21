@@ -11,11 +11,14 @@
     $comentario = $_POST['comentario'];
     $nota = $_POST['nota'];
     $genero = $_POST['genero'];
+    $capa = $_FILES['capa'];
+
+    echo $capa;
 
     echo $genero;
     
     
-    $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero);
+    $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
     
     echo "<pre>";
     

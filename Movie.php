@@ -11,8 +11,9 @@
             public $comentario;
             public $nota;
             public $genero;
+            public $capa;
 
-        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero)
+        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa)
         {
             $this->setId($id);
             $this->setTitulo($titulo);
@@ -23,6 +24,7 @@
             $this->setComentario($comentario);
             $this->setNota($nota);   
             $this->setGenero($genero);
+            $this->setCapa($capa);
         }    
             
 
@@ -75,6 +77,11 @@
         public function setGenero($genero)
         {
             $this->genero = $genero;
+        }
+
+        public function setCapa($capa)
+        {
+            $this->capa = $capa;
         }
 
 
