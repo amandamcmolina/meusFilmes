@@ -20,21 +20,25 @@
     
     $novoFilme = new Movie($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
     
-    echo "<pre>";
     
-    var_dump($novoFilme);
-    echo "<br>";
 
+
+    
+
+    //Salvar img em pasta
+
+    $date= new DateTime(); 
+    $timestamp = $date->getTimestamp();
+    
+    $capaSalva = $novoFilme->capa_tmp_name;
+    $capaNome = $novoFilme->titulo.$timestamp.'.jpg';
+    $dir = 'capas/';
+    move_uploaded_file($capaSalva, $dir.$capaNome);
+
+    $novoFilme->setUrlCapa($dir.$capaNome);
 
     $json = json_encode($novoFilme);
     file_put_contents('movies.json', $json);
-
-    //Salvar img em pasta
-    
-    $capaSalva = $novoFilme->capa_tmp_name;
-    $capaNome = $novoFilme->capa_name;
-    $dir = 'capas/';
-    move_uploaded_file($capaSalva, $dir.$capaNome);
 
     header('location:index.html');
 

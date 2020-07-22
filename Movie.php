@@ -14,6 +14,7 @@
             public $capa;
             public $capa_name;
             public $capa_tmp_name;
+            public $url;
 
         public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa)
         {
@@ -29,6 +30,7 @@
             $this->setCapa($capa);
             $this->capa_name = $capa['name'];
             $this->capa_tmp_name = $capa['tmp_name'];
+
         }    
             
 
@@ -86,6 +88,10 @@
         public function setCapa($capa)
         {
             $this->capa = $capa;
+        }
+
+        public function setUrlCapa($url){
+            $this->url = $url;
         }
 
 

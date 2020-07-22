@@ -23,11 +23,7 @@ function readTextFile(file, callback) {
         ano.textContent = dados.ano;
         
     var descricao = document.getElementsByClassName('movieDescription')[0];
-        descricao.textContent = dados.descricao;
-
-
-//     var atores = document.getElementsByClassName('principalsActors')[0];
-//     atores.textContent = "Patrick Swayse / Jennifer Grey";  
+        descricao.textContent = dados.descricao;  
 
 
     var diretor = document.getElementsByClassName('director')[0];
@@ -42,19 +38,14 @@ function readTextFile(file, callback) {
         nota.textContent = dados.nota; 
 
     var genre = document.getElementsByClassName('genre')[0];
-    genre.textContent = dados.genero;
+        genre.textContent = dados.genero;
 
-
-
-    ////////!!!!
+        
     var img = document.getElementsByClassName('img-capa')[0];
-    var 
-    if(dados.capa['name'] == ){
-        img.src = "img/filmeUm.jpg";
-    }
-    
-    // var img = document.getElementsByClassName('img-capa')[0];
-    // img.src = "img/filmeUm.jpg";
+        img.src = dados.url;
+
+//overhide
+
     // var capa = document.getElementById('img-capa')[0];
     // var img = document.createElement("img");
     // img.src = dados.capa;
