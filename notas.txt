@@ -7,6 +7,9 @@
 * 1°  Json Com JAVASCRIPT - Treino de front
 * 2°  Php + banco de dados - Treino back
 
+** Adicionar mais dados no Json
+** Adicionar mais cards no html com javascript a partir das infos do json
+
 
 
 

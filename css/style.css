@@ -209,19 +209,22 @@ input, textarea, select{
 }
 
 .coments{
+    display: inline;
     font-size: 15px;
     color: rgb(0, 132, 255);  
 }
 
 .plus{
-    width: 20px!important;
-    margin-right: 5px;
+    width: 13px!important;
+    padding-right: 10px;
+    margin: 0;
 }
 
 .card-movieItem p{
     margin-top: 6px;
     margin-bottom: 5px;
 }
+
 
 @media screen and (max-width: 1030px ) {
     .cabecalho{
