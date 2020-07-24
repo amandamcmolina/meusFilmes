@@ -8,6 +8,7 @@
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
 
 <body>
@@ -78,9 +79,7 @@
 
 
                     <label for="genero">Gênero:</label><br>
-                    <select name="genero" id="selecao-generos">
-                        <option value=""></option>
-                    </select><br>
+                    <input type="text" id="g_autocomplete" name="genero"><br>
 
 
                     <label for="atoresPrincipais">Atores Principais:</label><br>
@@ -122,14 +121,18 @@
         </section>
     </main>
 
+    <form action="post">
+        <input type="text" name="teste" id="teste" placeholder="Escolha " style="margin-top: 10px; margin-left: 200px;">
+    </form>
+
     <script src="js/registerMovieSupport.js"></script>
     <script src="js/cardMovie.js"></script>
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>
     <script src="js/addMovie.js"></script>
-    
-    
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 
 </body>
 
@@ -151,3 +154,9 @@
     <input class="delete" type="button" value="editar">
     <input class="edit" type="button" value="excluir">
 </section> -->
+
+
+<!-- <label for="genero">Gênero:</label><br>
+                    <select name="genero" id="selecao-generos">
+                        <option value=""></option>
+                    </select><br> -->

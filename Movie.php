@@ -2,7 +2,6 @@
 
     class Movie
     {
-            public $id;
             public $titulo;
             public $descricao;
             public $atores;
@@ -16,9 +15,8 @@
             public $capa_tmp_name;
             public $url;
 
-        public function __construct($id, $titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa)
+        public function __construct($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa)
         {
-            $this->setId($id);
             $this->setTitulo($titulo);
             $this->setDescricao($descricao);
             $this->setAtores($atores);

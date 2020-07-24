@@ -7,8 +7,17 @@
 * 1°  Json Com JAVASCRIPT - Treino de front
 * 2°  Php + banco de dados - Treino back
 
-** Adicionar mais dados no Json
-** Adicionar mais cards no html com javascript a partir das infos do json
+** to feed json with more datas
+** Add mais cards no html com javascript a partir das infos do json
+
+
+
+- I CONNECTED WITH THE DATA BANK USING PHP  -  OK
+- I CAN PUT THE DATAS IN THE BANK of FORM
+
+- Now, i need to do a dinamic input. Like, when a write some letter, the input offers to me the options with this letter. And this options, the input will catch in te data base.
+
+- Writing: A - The php will search in the data base and will give back the words. Before sumit.
 
 
 
