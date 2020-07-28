@@ -8,7 +8,6 @@
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
@@ -67,7 +66,7 @@
 
 
         <div class="addPrimeiroFilme">
-            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme" >
+            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
         </div>
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">
@@ -84,7 +83,14 @@
 
 
                     <label for="atoresPrincipais">Atores Principais:</label><br>
-                    <input type="atoresPrincipais" id="atoresPrincipais" name="atoresPrincipais"><br>
+                    <div class="container">
+                        <div class="tag-container">
+                            <input type="text" id="atoresPrincipais" name="atoresPrincipais"><br>
+                        </div>
+                    </div>
+
+
+
                     <button type="button" id="maisAtores"></button></br>
                     <label for="diretor">Diretor:</label><br>
                     <input type="text" id="diretor" name="diretor"><br>
@@ -96,17 +102,17 @@
                     <input type="number" id="nota" name="nota"><br>
                     <label for="capa">Adicione uma capa para o filme:</label><br>
                     <input type="file" name="capa"><br>
-                    <button class=" btn btn-save">Salvar</button>
+                    <!-- <button class=" btn btn-save">Salvar</button> -->
                 </form>
             </div>
         </section>
 
-       
+
 
 
         <section class="card-movieItem">
             <div class="testeCard">
-                <img class = "img-capa"  alt="capa do filme">
+                <img class="img-capa" alt="capa do filme">
                 <p class="atualizacao">15/07/2020</p>
                 <h2 class="tituloFinal"></h2>
                 <p class="year"></p>
@@ -114,7 +120,8 @@
                 <p class="genre"> <a href="#"></a></p>
                 <p class="principalsActors"></p>
                 <p class="director"></p>
-                <img class="plus"src="img/plus.png" alt="Comentário Pessoal"><p class="coments"> </p>
+                <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
+                <p class="coments"> </p>
                 <p class="grade"> </p>
                 <input class="delete btn" type="button" value="editar">
                 <input class="edit btn" type="button" value="excluir">
@@ -122,17 +129,11 @@
         </section>
     </main>
 
-    <form action="post">
-        <input type="text" name="teste" id="teste" placeholder="Escolha o gênero" style="margin-top: 10px; margin-left: 200px;">
-    </form>
 
-    
     <script src="js/cardMovie.js"></script>
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>
     <script src="js/addMovie.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/registerMovieSupport.js"></script>
