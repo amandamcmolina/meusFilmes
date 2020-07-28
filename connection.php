@@ -9,7 +9,7 @@ $pass = "";
 try{
     $db = new PDO($host, $user, $pass);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ACESSAR ERROS DO SQL
-    echo "Conexão feita com sucesso";
+    // echo "Conexão feita com sucesso";
 }catch(PDOException $e){
     echo "Erro na conexão com o banco de dados".$e->getMessage();
 }catch(Exception $e){

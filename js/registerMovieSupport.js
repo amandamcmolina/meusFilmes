@@ -15,15 +15,19 @@
 //AUTOCOMPLETE  - JSON + MYSQL + PHP + jquery
 
 $(function () {
-    
-    $("#teste").autocomplete({
-        source: 'upGenres.php'
+    $("#g_autocomplete").autocomplete({
+        source: "upGenres.php",
+        minLength: 2
     });
 });
 
-// var esportes = [
-//     "Natação",
-//     "Futebol",
-//     "Vôlei",
-//     "Basquete"
-//   ];
+
+
+
+// $(function () {
+//     $("#teste").autocomplete({
+//         source: ["Amanda", 'Larissa', "Juscely", "Ramon", "Valdeci", "Artur"],
+//         minLength: 2
+//     });
+// });
+
