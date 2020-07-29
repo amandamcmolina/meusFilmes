@@ -71,7 +71,7 @@
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">
                 <span class="closeMovie">&times;</span>
-                <form action="addFilme.php" method="post" enctype="multipart/form-data">
+                <form action="php/addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
                     <input type="text" id="titulo" name="titulo"><br>
                     <label for="descricao">Descrição:</label><br>
@@ -79,19 +79,19 @@
 
 
                     <label for="genero">Gênero:</label><br>
-                    <input type="text" id="g_autocomplete" name="genero"><br>
+                    <div class="container-genero">
+                        <div class="tag-container-genero">
+                            <input type="text" id="g_autocomplete" name="genero"><br>
+                        </div>
+                    </div>
 
 
                     <label for="atoresPrincipais">Atores Principais:</label><br>
                     <div class="container">
                         <div class="tag-container">
-                            <input type="text" id="atoresPrincipais" name="atoresPrincipais"><br>
+                            <input type="text" id="atoresPrincipais" name="atoresPrincipais">
                         </div>
                     </div>
-
-
-
-                    <button type="button" id="maisAtores"></button></br>
                     <label for="diretor">Diretor:</label><br>
                     <input type="text" id="diretor" name="diretor"><br>
                     <label for="ano">Ano de estreia:</label><br>
@@ -136,7 +136,7 @@
     <script src="js/addMovie.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/autoComplete.js"></script>
+    <script src="js/autoCompleteGeneros.js"></script>
     <script src="js/tagInputActor.js"></script>
     <script src="js/help.js"></script>
 
@@ -144,6 +144,8 @@
 </body>
 
 </html>
+
+<!--  -->
 
 <!-- <section class="movieItem">
     <img src="img/filmeUm.jpg" alt="dirtyDancing">
