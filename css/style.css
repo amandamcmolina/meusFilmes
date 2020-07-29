@@ -22,7 +22,7 @@
     background-color: #f2f2f2;
 }
 
-.tag span{
+.tag i{
     font-size: 16px;
     margin-left: 5px;
 }
@@ -148,11 +148,13 @@ input, textarea, select{
     border-radius: 4px;
     padding: 5px;
     border: solid 1px rgb(161, 156, 156);
+    outline: none;
 }
 
 .userRegisterForm input{
     margin: 10px 0 10px 0;
     width: 70%; 
+    outline: none;
 }
 
 .titulocadastro{
@@ -187,6 +189,7 @@ input, textarea, select{
 .movieItemRegister input, .movieItemRegister textarea, .movieItemRegister select{
     width: 80%;
     margin: 8px 0 8px 0;
+    outline: none;
 }
 
 .btn-addFilme{
@@ -294,6 +297,9 @@ input, textarea, select{
         width: 60%;
     }
 
+    .modal-contentMovie{
+        width: 50%;
+    }
    
 
 }
@@ -323,6 +329,10 @@ input, textarea, select{
 
     .modal-content{
         width: 70%;
+    }
+
+    .modal-contentMovie{
+        width: 60%;
     }
 
    
