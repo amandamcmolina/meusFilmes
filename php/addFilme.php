@@ -24,8 +24,9 @@ $date = new DateTime();
 $timestamp = $date->getTimestamp();
 
 $capaSalva = $novoFilme->capa_tmp_name;
-$capaNome = $novoFilme->titulo . $timestamp . '.jpg';
-$dir = 'capas/';
+$capaNome = $novoFilme->capa_name . $timestamp . '.jpg';
+
+$dir = '../capas/';
 move_uploaded_file($capaSalva, $dir . $capaNome);
 
 $novoFilme->setUrlCapa($dir . $capaNome);
@@ -45,7 +46,8 @@ $query->bindValue(":u", $novoFilme->url);
 $query->execute();
 
 
-header('location:index.html');
+header('location:../index.php');
+
 
 
 

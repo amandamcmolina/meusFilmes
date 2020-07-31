@@ -64,3 +64,9 @@
     * link to database 
     
 
+
+TRY
+    * PUT DATAS OF DATABASE IN THE HTML
+      
+
+

@@ -14,12 +14,12 @@
 
 //AUTOCOMPLETE  - JSON + MYSQL + PHP + jquery
 
-// $(function () {
-//     $("#g_autocomplete").autocomplete({
-//         source: "./php/upGenres.php",
-//         minLength: 2
-//     });
-// });
+$(function () {
+    $("#g_autocomplete").autocomplete({
+        source: "./php/upGenres.php",
+        minLength: 2
+    });
+});
 
 
 var tagContainerGenero = document.querySelector('.tag-container-genero');

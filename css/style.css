@@ -204,8 +204,20 @@ input, textarea, select{
     box-shadow: 3px 3px 3px rgba(128, 124, 124, 0.77);
 }
 
+.filmes{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* .meus-filmes{
+    
+} */
+
 .card-movieItem{
-    width: 22%;
+    width: 30%;
     /* height: 480px; */
     text-align: center;
     margin: 0 auto; /*alterar para flexbox*/
