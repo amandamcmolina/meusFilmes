@@ -217,7 +217,7 @@ input, textarea, select{
 } */
 
 .card-movieItem{
-    width: 30%;
+    width: 29%;
     /* height: 480px; */
     text-align: center;
     margin: 0 auto; /*alterar para flexbox*/
@@ -225,11 +225,20 @@ input, textarea, select{
     padding: 12px;
     border-radius: 20px;
     margin-bottom: 20px;
+    margin-right: 7px;
     box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
 }
 
-.card-movieItem img{
+
+.img-capa{
     width: 100%;
+    height: 140px;
+    object-fit: cover;
+    filter: saturate(0.6);
+}
+
+.img-capa:hover{
+    filter: saturate(1);
 }
 
 .atualizacao{

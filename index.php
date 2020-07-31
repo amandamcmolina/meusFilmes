@@ -113,70 +113,70 @@ require_once('php/cardFormulation.php');
         <div class="filmes">
         
         
-        <?php
-            
-                echo "<section class='card-movieItem meus-filmes'>";
-                echo "<img class='img-capa' alt='capa do filme' src=".$array_card[1]['url_capa'].">";
-                echo "<p class='atualizacao'>15/07/2020</p>";
-                echo "<h2 class='tituloFinal'>";
-                echo $array_card[1]['titulo'];
-                echo "</h2>";
-                echo "<p class='year'>".$array_card[1]['anoEstreia']."</p>";
-                echo "<p class='movieDescription'></p>";
-                echo "<p class='genre'> <a href='#'></a></p>";
-                echo "<p class='principalsActors'></p>";
-                echo "<p class='director'></p>";
-                echo "<img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                echo "<p class='coments'> </p>";
-                echo "<p class='grade'> </p>";
-                echo "</section>";
+            <?php
                 
-        ?>
-        <?php
-            foreach($array_card as $dados){  
-                echo "<section class='card-movieItem meus-filmes'>";
-                echo "<img class='img-capa' alt='capa do filme' src=".$dados['url_capa'].">";
-                echo "<p class='atualizacao'>15/07/2020</p>";
-                echo "<h2 class='tituloFinal'>";
-                echo $dados['titulo'];
-                echo "</h2>";
-                echo "<p class='year'>".$dados['anoEstreia']."</p>";
-                echo "<p class='movieDescription'>".$dados['descricao']."</p>";
-                echo "<p class='genre'> <a href='#'></a></p>";
-                echo "<p class='principalsActors'></p>";
-                echo "<p class='director'>Direção por: ".$dados['diretor']."</p>";
-                echo "<img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                echo "<p class='coments'>".$dados['comentario']." </p>";
-                echo "<p class='grade'>Nota: ".$dados['nota']." </p>";
-                echo "</section>";
-                
-            }
-        ?>
+                    echo "<section class='card-movieItem meus-filmes'>";
+                    echo "<img class='img-capa' alt='capa do filme' src=".$array_card[1]['url_capa'].">";
+                    echo "<p class='atualizacao'>15/07/2020</p>";
+                    echo "<h2 class='tituloFinal'>";
+                    echo $array_card[1]['titulo'];
+                    echo "</h2>";
+                    echo "<p class='year'>".$array_card[1]['anoEstreia']."</p>";
+                    echo "<p class='movieDescription'></p>";
+                    echo "<p class='genre'> <a href='#'></a></p>";
+                    echo "<p class='principalsActors'></p>";
+                    echo "<p class='director'></p>";
+                    echo "<img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                    echo "<p class='coments'> </p>";
+                    echo "<p class='grade'> </p>";
+                    echo "</section>";
+                    
+            ?>
+            <?php
+                foreach($array_card as $dados){  
+                    echo "<section class='card-movieItem meus-filmes'>";
+                    echo "<img class='img-capa' alt='capa do filme' src=".$dados['url_capa'].">";
+                    echo "<p class='atualizacao'>15/07/2020</p>";
+                    echo "<h2 class='tituloFinal'>";
+                    echo $dados['titulo'];
+                    echo "</h2>";
+                    echo "<p class='year'>".$dados['anoEstreia']."</p>";
+                    echo "<p class='movieDescription'>".$dados['descricao']."</p>";
+                    echo "<p class='genre'> <a href='#'></a></p>";
+                    echo "<p class='principalsActors'></p>";
+                    echo "<p class='director'>Direção por: ".$dados['diretor']."</p>";
+                    echo "<img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                    echo "<p class='coments'>".$dados['comentario']." </p>";
+                    echo "<p class='grade'>Nota: ".$dados['nota']." </p>";
+                    echo "</section>";
+                    
+                }
+            ?>
 
 
         
 
 
         <!-- MODELO -->
-        <section class="card-movieItem meus-filmes">
-                <img src="img/filmeUm.jpg" alt="dirtyDancing">
-                <p class="atualizacao">15/07/2020</p>
-                <h2>Dirty Dancing</h2>
-                <p class="year">1987</p>
-                <p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
-                    seu
-                    verdadeiro amor em um dançarino. No meio de muita dança e amor, eles precisam passar por obstáculos
-                    sociais para finalmente se encontrarem como um casal. </p>
-                <p class="genre"> <a href="#"> Romance</a></p>
-                <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
-                <p class="director">Direção por: Emile Ardolino</p>
-                <p class="coments"> <img class="plus" src="img/plus.png" alt="Comentário Pessoal">Top 10 dos meus filmes
-                    preferidos</p>
-                <p class="  "> Nota: 10</p>
-                <input class="delete" type="button" value="editar">
-                <input class="edit" type="button" value="excluir">
-            
-        </section>
+            <section class="card-movieItem meus-filmes">
+                    <img class= "img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
+                    <p class="atualizacao">15/07/2020</p>
+                    <h2>Dirty Dancing</h2>
+                    <p class="year">1987</p>
+                    <p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
+                        seu
+                        verdadeiro amor em um dançarino. No meio de muita dança e amor, eles precisam passar por obstáculos
+                        sociais para finalmente se encontrarem como um casal. </p>
+                    <p class="genre"> <a href="#"> Romance</a></p>
+                    <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
+                    <p class="director">Direção por: Emile Ardolino</p>
+                    <p class="coments"> <img class="plus" src="img/plus.png" alt="Comentário Pessoal">Top 10 dos meus filmes
+                        preferidos</p>
+                    <p class="  "> Nota: 10</p>
+                    <input class="delete" type="button" value="editar">
+                    <input class="edit" type="button" value="excluir">
+                
+            </section>
         <!-- FIM DO MODELO -->
         </div>
 
