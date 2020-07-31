@@ -210,23 +210,32 @@ input, textarea, select{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
-/* .meus-filmes{
-    
-} */
+.meus-filmes{
+    justify-content: flex-start;
+    position: relative;
+    height: 430px ;
+}
 
 .card-movieItem{
     width: 29%;
     /* height: 480px; */
     text-align: center;
-    margin: 0 auto; /*alterar para flexbox*/
+    /* margin: 0 auto;  */
     background-color: white;
     padding: 12px;
+    margin-right: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
-    margin-right: 7px;
     box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
+}
+
+.edit-delete{
+    position: absolute;
+    bottom: 5px;
+    left: 31.009%;
 }
 
 
@@ -309,7 +318,13 @@ input, textarea, select{
         width: 100%;
     }
     .card-movieItem{
-        width: 60%;;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .meus-filmes{
+        height: 460px ;
     }
 
     .entrar{
@@ -343,7 +358,13 @@ input, textarea, select{
     }
     .card-movieItem{
         width: 80%;
+        margin: 0 auto;
+        margin-bottom: 15px;
         
+    }
+
+    .meus-filmes{
+        height: 550px ;
     }
 
     .entrar{

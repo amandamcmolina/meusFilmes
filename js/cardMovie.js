@@ -13,7 +13,7 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
-    readTextFile("movies.json", function(json){
+    readTextFile("", function(json){
         var dados = JSON.parse(json);
 
     var titulo = document.getElementsByClassName('tituloFinal')[0];
