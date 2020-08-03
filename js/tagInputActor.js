@@ -10,6 +10,7 @@ var tagContainer = document.querySelector('.tag-container');
 var input = document.querySelector('.tag-container input');
 var tags = []; // [oi, oi, java]
 
+
 function createTag(label) {
     var div = document.createElement('div');
     div.setAttribute('class', 'tag');
@@ -19,8 +20,12 @@ function createTag(label) {
     closeBtn.setAttribute('class', 'material-icons');
     closeBtn.setAttribute('data-item', label);
     closeBtn.innerHTML = 'close';
-
+    var inputHidden = document.createElement('input');
+    inputHidden.setAttribute('type', 'hidden');
+    inputHidden.setAttribute('name', 'atoresPrincipais[]');
+    inputHidden.setAttribute('value', label)
     div.appendChild(span);
+    div.appendChild(inputHidden);
     div.appendChild(closeBtn);
     return div;
 }
@@ -41,7 +46,7 @@ function addTags() {
 
 var upActors = function (e) {
     if (e.key == 'Enter') {
-        tags.push(input.value);
+        var tagFinal = tags.push(input.value);
         addTags();
         input.value = '';
     }
@@ -57,6 +62,10 @@ document.addEventListener('click', function (e) {
         const index = tags.indexOf(tagLabel);
         tags = [...tags.slice(0, index), ...tags.slice(index + 1)];
         addTags();
+        
     }
 })
+
+// RETORNAR TAG FINAL
+
 

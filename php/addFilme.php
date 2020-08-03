@@ -17,7 +17,15 @@ $genero = $_POST['genero'];
 $capa = $_FILES['capa'];
 
 
+
+echo $atores;
+
+
+
+
+
 $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
+
 
 //SAVING img in the folder "capas"
 $date = new DateTime();
@@ -47,6 +55,7 @@ $query->execute();
 
 
 header('location:../index.php');
+
 
 
 

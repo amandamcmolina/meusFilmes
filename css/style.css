@@ -210,13 +210,13 @@ input, textarea, select{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    
 }
 
+
 .meus-filmes{
-    justify-content: flex-start;
     position: relative;
-    height: 430px ;
+    height: 485px ;
 }
 
 .card-movieItem{
@@ -226,7 +226,7 @@ input, textarea, select{
     /* margin: 0 auto;  */
     background-color: white;
     padding: 12px;
-    margin-right: 10px;
+    margin-right: 7px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
@@ -260,8 +260,25 @@ input, textarea, select{
     margin: 10px;
 }
 
+.tituloSquare{
+    text-align: center;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.tituloSquare h2{
+    margin: 0 auto;
+}   
+
 .year{
     font-size: 16px;
+}
+
+.movieSquare{
+    height: 62px;
+    overflow: hidden;
 }
 
 .movieDescription{
@@ -273,6 +290,7 @@ input, textarea, select{
     font-family: cursive;
 }
 
+
 .genre a{
     text-decoration: none;
     color: black;
@@ -283,20 +301,28 @@ input, textarea, select{
     font-weight: bold;
 }
 
-.grade{
-    font-weight: bold;
+.comentarioSquare{
+    height: 33px;
+    overflow: hidden;
+   
+    
 }
 
-.coments{
+.comentarioSquare p{
     display: inline;
     font-size: 15px;
-    color: rgb(0, 132, 255);  
+    color: rgb(0, 132, 255); 
+    margin: 0 0; 
+    text-align: end;
+}
+
+.grade{
+    font-weight: bold;
 }
 
 .plus{
     width: 13px!important;
     padding-right: 10px;
-    margin: 0;
 }
 
 .card-movieItem p{
@@ -324,7 +350,7 @@ input, textarea, select{
     }
 
     .meus-filmes{
-        height: 460px ;
+        height: 470px ;
     }
 
     .entrar{
@@ -364,7 +390,7 @@ input, textarea, select{
     }
 
     .meus-filmes{
-        height: 550px ;
+        height: 560px ;
     }
 
     .entrar{

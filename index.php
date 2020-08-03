@@ -93,9 +93,12 @@ require_once('php/cardFormulation.php');
                     <label for="atoresPrincipais">Atores Principais:</label><br>
                     <div class="container">
                         <div class="tag-container">
-                            <input type="text" id="atoresPrincipais" name="atoresPrincipais">
+                            <input type="text" id="atoresPrincipais" name="atores">
                         </div>
                     </div>
+
+
+
                     <label for="diretor">Diretor:</label><br>
                     <input type="text" id="diretor" name="diretor"><br>
                     <label for="ano">Ano de estreia:</label><br>
@@ -121,16 +124,16 @@ require_once('php/cardFormulation.php');
                     echo "<section class='card-movieItem meus-filmes'>";
                     echo "<img class='img-capa' alt='capa do filme' src=".$dados['url_capa'].">";
                     echo "<p class='atualizacao'>15/07/2020</p>";
-                    echo "<h2 class='tituloFinal'>";
+                    echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
                     echo $dados['titulo'];
-                    echo "</h2>";
+                    echo "</h2></div>";
                     echo "<p class='year'>".$dados['anoEstreia']."</p>";
-                    echo "<p class='movieDescription'>".$dados['descricao']."</p>";
-                    echo "<p class='genre'> <a href='#'></a></p>";
-                    echo "<p class='principalsActors'></p>";
-                    echo "<p class='director'>Direção por: ".$dados['diretor']."</p>";
-                    echo "<img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                    echo "<p class='coments'>".$dados['comentario']." </p>";
+                    echo "<div class='movieSquare'><p class='movieDescription'>".$dados['descricao']."</p></div>";
+                    echo "<p class='genre'> <a href='#'>Gênero</a></p>";
+                    echo "<p class='principalsActors'>AtorUm / AtorDois</p>";
+                    echo "<p class='director'>Direção   : ".$dados['diretor']."</p>";
+                    echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                    echo "<p class='coments'>".$dados['comentario']." </p></div>";
                     echo "<p class='grade'>Nota: ".$dados['nota']." </p>";
                     echo "<div class='edit-delete'>
                                 <input class='delete btn' type='button' value='editar'>
@@ -150,17 +153,21 @@ require_once('php/cardFormulation.php');
             <section class="card-movieItem meus-filmes">
                     <img class= "img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
                     <p class="atualizacao">15/07/2020</p>
-                    <h2>Dirty Dancing</h2>
+                    <div class='tituloSquare'><h2>Dirty Dancing</h2></div>
                     <p class="year">1987</p>
-                    <p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
+                    <div class="movieSquare"><p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
                         seu
-                        verdadeiro amor em um dançarino.. </p>
+                        verdadeiro amor em um dançarino. </p></div>
                     <p class="genre"> <a href="#"> Romance</a></p>
                     <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
-                    <p class="director">Direção por: Emile Ardolino</p>
-                    <p class="coments"> <img class="plus" src="img/plus.png" alt="Comentário Pessoal">Top 10 dos meus filmes
+                    <p class="director">Direção: Emile Ardolino</p>
+                    <div class="comentarioSquare">
+                    <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
+                        <p class="coments">Top 10 dos meus filmes
                         preferidos</p>
-                    <p class="  "> Nota: 10</p>
+                    </div>
+                    
+                    <p class="grade"> Nota: 10</p>
                     <div class="edit-delete">
                         <input class="delete btn" type="button" value="editar">
                         <input class="edit btn" type="button" value="excluir">
@@ -173,7 +180,7 @@ require_once('php/cardFormulation.php');
     </main>
 
 
-    <script src="js/cardMovie.js"></script>
+    <!-- <script src="js/cardMovie.js"></script> -->
     <script src="js/login.js"></script>
     <script src="js/cadastro.js"></script>
     <script src="js/addMovie.js"></script>
