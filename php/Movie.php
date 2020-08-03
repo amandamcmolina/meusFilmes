@@ -1,5 +1,6 @@
 <?php
 
+
     class Movie
     {
             public $titulo;
@@ -34,11 +35,15 @@
 
         public function setId($id)
         {
+            
             $this->id = $id;
         }
 
         public function setTitulo($titulo)
         {
+            // if(mb_strlen($titulo) > 35){
+            //     throw new Exception("Seu título não pode ter mais de 35 caracteres!");
+            // }
             $this->titulo = $titulo;
         }
 

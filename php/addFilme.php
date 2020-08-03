@@ -16,16 +16,13 @@ $nota = $_POST['nota'];
 $genero = $_POST['genero'];
 $capa = $_FILES['capa'];
 
-
-
-echo $atores;
-
-
-
-
+// try{
+//     $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
+// }catch(Exception $exception){
+//     echo $exception->getMessage();
+// }
 
 $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
-
 
 //SAVING img in the folder "capas"
 $date = new DateTime();
