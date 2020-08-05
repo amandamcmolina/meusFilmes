@@ -1,11 +1,10 @@
 <?php
 
 //SALVAR DADOS NO MYSQL
-
 include('Movie.php');
 include('connection.php');
 
-//PASSING INFORMATIONS ABOUT DE MOVIE
+//PASSING INFORMATIONS ABOUT THE MOVIE
 $titulo = $_POST['titulo'];
 $descricao = $_POST['descricao'];
 $atores = $_POST['atoresPrincipais'];
@@ -16,42 +15,28 @@ $nota = $_POST['nota'];
 $genero = $_POST['genero'];
 $capa = $_FILES['capa'];
 
-// try{
-//     $novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
-// }catch(Exception $exception){
-//     echo $exception->getMessage();
-// }
 
-$novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa);
+
+$novoFilme = new Movie($titulo, $descricao, $atores, $diretor, $ano, $comentario, $nota, $genero, $capa, $id);
 
 //SAVING img in the folder "capas"
-$date = new DateTime();
-$timestamp = $date->getTimestamp();
-
-$capaSalva = $novoFilme->capa_tmp_name;
-$capaNome = $novoFilme->capa_name . $timestamp . '.jpg';
-
-$dir = '../capas/';
-move_uploaded_file($capaSalva, $dir . $capaNome);
-
-$novoFilme->setUrlCapa($dir . $capaNome);
-$url_capa = $novoFilme->url;
-
+$novoFilme->registerCoverMovie();
 
 //SAVING THE DATAS IN THE data bank
-$query = $db->prepare("INSERT INTO movies (titulo, descricao, diretor, anoEstreia, comentario, nota, url_capa) VALUES (:t, :de, :di, :a, :c, :n, :u)");
+// $msg = "Filme criado com sucesso";
+// if($novoFilme->checkRegister($db) == false){
+//     $msg = "Filme já cadastrado. Tente novamente.";
+// }
+if($novoFilme->checkRegister($db)){
+    $msg = "Já existe";
+}else{
+    $novoFilme->registerMovie($db);
+    $msg = "Filme criado com sucesso";
+}
 
-$query->bindValue(":t", $novoFilme->titulo);
-$query->bindValue(":de", $novoFilme->descricao);
-$query->bindValue(":di", $novoFilme->diretor);
-$query->bindValue(":a", $novoFilme->ano);
-$query->bindValue(":c", $novoFilme->comentario);
-$query->bindValue(":n", $novoFilme->nota);
-$query->bindValue(":u", $novoFilme->url);
-$query->execute();
 
 
-header('location:../index.php');
+header('location:../index.php?msg='.$msg);
 
 
 

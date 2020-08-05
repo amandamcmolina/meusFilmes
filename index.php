@@ -1,6 +1,7 @@
 <?php
 require_once('php/cardFormulation.php');
-?> 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,8 +68,12 @@ require_once('php/cardFormulation.php');
     </div>
 
     <main>
+        <?php
+            if($msg){//flash message
+                echo "<h2>".$msg."</h2>";
+            }
 
-
+        ?>
         <div class="addPrimeiroFilme">
             <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
         </div>
@@ -80,7 +85,7 @@ require_once('php/cardFormulation.php');
                     <input type="text" id="titulo" name="titulo" maxlength="36"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3" maxlength="137"></textarea><br>
-                    
+
 
                     <label for="genero">Gênero:</label><br>
                     <div class="container-genero">
@@ -116,65 +121,72 @@ require_once('php/cardFormulation.php');
 
 
         <div class="filmes">
-        
-        
-            
+
+
+
             <?php
-                foreach($array_card as $dados){  
-                    echo "<section class='card-movieItem meus-filmes'>";
-                    echo "<img class='img-capa' alt='capa do filme' src=".$dados['url_capa'].">";
-                    echo "<p class='atualizacao'>15/07/2020</p>";
-                    echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
-                    echo $dados['titulo'];
-                    echo "</h2></div>";
-                    echo "<p class='year'>".$dados['anoEstreia']."</p>";
-                    echo "<div class='movieSquare'><p class='movieDescription'>".$dados['descricao']."</p></div>";
-                    echo "<p class='genre'> <a href='#'>Gênero</a></p>";
-                    echo "<p class='principalsActors'>AtorUm / AtorDois</p>";
-                    echo "<p class='director'>Direção   : ".$dados['diretor']."</p>";
-                    echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                    echo "<p class='coments'>".$dados['comentario']." </p></div>";
-                    echo "<p class='grade'>Nota: ".$dados['nota']." </p>";
-                    echo "<div class='edit-delete'>
-                                <input class='delete btn' type='button' value='editar'>
-                                <input class='edit btn' type='button' value='excluir'>
-                            </div>";
-                    echo "</section>";
-                    
-                }
+            foreach ($array_card as $dados) {
+                echo "<section class='card-movieItem meus-filmes'>";
+                echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
+                echo "<p class='atualizacao'>15/07/2020</p>";
+                echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
+                echo $dados['titulo'];
+                echo "</h2></div>";
+                echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
+                echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
+                echo "<p class='genre'> <a href='#'>Gênero</a></p>";
+                echo "<p class='principalsActors'>AtorUm / AtorDois</p>";
+                echo "<p class='director'>Direção   : " . $dados['diretor'] . "</p>";
+                echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
+                echo "<p class='grade'>Nota: " . $dados['nota'] . " </p>"; ?>
+                <div class='edit-delete'>
+                    <input class='edit btn' type='button' value='editar'>
+                    <form action="php/deleteMovie.php" method="POST" >
+                        <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
+                        <input class='delete btn' type='submit' value='excluir'>
+                    </form>
+                </div>
+            <?php
+                echo "</section>";
+            }
             ?>
 
-           
-            
 
 
 
-        <!-- MODELO -->
+
+
+            <!-- MODELO -->
             <section class="card-movieItem meus-filmes">
-                    <img class= "img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
-                    <p class="atualizacao">15/07/2020</p>
-                    <div class='tituloSquare'><h2>Dirty Dancing</h2></div>
-                    <p class="year">1987</p>
-                    <div class="movieSquare"><p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
+                <img class="img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
+                <p class="atualizacao">15/07/2020</p>
+                <div class='tituloSquare'>
+                    <h2>Dirty Dancing</h2>
+                </div>
+                <p class="year">1987</p>
+                <div class="movieSquare">
+                    <p class="movieDescription">O filme é sobre as férias de verão de Baby, uma jovem mulher que encontra
                         seu
-                        verdadeiro amor em um dançarino. </p></div>
-                    <p class="genre"> <a href="#"> Romance</a></p>
-                    <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
-                    <p class="director">Direção: Emile Ardolino</p>
-                    <div class="comentarioSquare">
+                        verdadeiro amor em um dançarino. </p>
+                </div>
+                <p class="genre"> <a href="#"> Romance</a></p>
+                <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
+                <p class="director">Direção: Emile Ardolino</p>
+                <div class="comentarioSquare">
                     <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
-                        <p class="coments">Top 10 dos meus filmes
+                    <p class="coments">Top 10 dos meus filmes
                         preferidos</p>
-                    </div>
-                    
-                    <p class="grade"> Nota: 10</p>
-                    <div class="edit-delete">
-                        <input class="delete btn" type="button" value="editar">
-                        <input class="edit btn" type="button" value="excluir">
-                    </div>
-                    
+                </div>
+
+                <p class="grade"> Nota: 10</p>
+                <div class="edit-delete">
+                    <input class="delete btn" type="button" value="editar">
+                    <input class="edit btn" type="button" value="excluir" onclick="window.location.href='index.php'">
+                </div>
+
             </section>
-        <!-- FIM DO MODELO -->
+            <!-- FIM DO MODELO -->
         </div>
 
     </main>
