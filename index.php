@@ -152,11 +152,6 @@ require_once('php/cardFormulation.php');
             }
             ?>
 
-
-
-
-
-
             <!-- MODELO -->
             <section class="card-movieItem meus-filmes">
                 <img class="img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
@@ -180,9 +175,11 @@ require_once('php/cardFormulation.php');
                 </div>
 
                 <p class="grade"> Nota: 10</p>
-                <div class="edit-delete">
-                    <input class="delete btn" type="button" value="editar">
-                    <input class="edit btn" type="button" value="excluir" onclick="window.location.href='index.php'">
+                <div class='edit-delete'>
+                    <input class='edit btn' type='button' value='editar'>
+                    <form action="php/deleteMovie.php" method="POST" >
+                        <input class='delete btn' type='submit' value='excluir'>
+                    </form>
                 </div>
 
             </section>
