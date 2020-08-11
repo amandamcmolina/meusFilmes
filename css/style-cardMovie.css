@@ -1,0 +1,159 @@
+.filmes{
+    width: 73%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-movieItem{
+    width: 29%;
+    height: 485px;
+    text-align: center;
+    background-color: white;
+    padding: 13px;
+    margin-right: 9px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 5px 5px 2px rgba(128, 124, 124, 0.2);
+    filter: saturate(0.6);
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.card-movieItem:hover{
+    filter: saturate(1.1);
+    transition-duration: 0.3s;
+    box-shadow: 6px 6px 3px rgba(128, 124, 124, 0.70);
+    /* transition-delay: 0.1s; */
+}
+
+.edit-delete{
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.edit{
+    margin-right: 5px;
+}
+
+
+.img-capa{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.img-capa:hover{
+    filter: saturate(1);
+}
+
+.atualizacao{
+    font-size: 12px;
+    text-align: end;
+    font-style: italic;
+}
+
+.testCard h2{
+    margin: 10px;
+}
+
+.tituloSquare{
+    text-align: center;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.tituloSquare h2{
+    margin: 0 auto;
+}   
+
+.year{
+    font-size: 16px;
+}
+
+.movieSquare{
+    height: 62px;
+    overflow: hidden;
+}
+
+.movieDescription{
+    text-align: center;
+    font-size: 14px;
+}
+
+.genre{
+    font-family: cursive;
+}
+
+
+.genre a{
+    text-decoration: none;
+    color: black;
+}
+
+.genre a:hover{
+    color: rgb(27, 27, 117);
+    font-weight: bold;
+}
+
+.comentarioSquare{
+    height: 33px;
+    overflow: hidden;
+   
+    
+}
+
+.comentarioSquare p{
+    display: inline;
+    font-size: 15px;
+    color: rgb(0, 132, 255); 
+    margin: 0 0; 
+    text-align: end;
+}
+
+.grade{
+    font-weight: bold;
+}
+
+.plus{
+    width: 13px!important;
+    padding-right: 10px;
+}
+
+.card-movieItem p{
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 1030px ) {
+    
+    .card-movieItem{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        height: 480px;
+    }
+
+
+}
+
+    
+
+@media screen and (max-width: 550px ) {
+    
+    .card-movieItem{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        height: 500px ;
+    }  
+
+}

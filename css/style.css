@@ -204,146 +204,9 @@ input, textarea, select{
     box-shadow: 3px 3px 3px rgba(128, 124, 124, 0.77);
 }
 
-.filmes{
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-}
 
 
-.meus-filmes{
-    position: relative;
-    height: 485px ;
-}
 
-.card-movieItem{
-    width: 29%;
-    /* height: 480px; */
-    text-align: center;
-    /* margin: 0 auto;  */
-    background-color: white;
-    padding: 12px;
-    margin-right: 9px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 5px 5px 2px rgba(128, 124, 124, 0.2);
-    filter: saturate(0.6);
-}
-
-.card-movieItem:hover{
-    
-    filter: saturate(1.1);
-    transition-duration: 0.3s;
-    box-shadow: 6px 6px 3px rgba(128, 124, 124, 0.70);
-    /* transition-delay: 0.1s; */
-}
-
-
-.edit-delete{
-    position: absolute;
-    bottom: 5px;
-    left: 31.009%;
-    display: flex;
-    flex-direction: row;
-}
-
-.edit{
-    margin-right: 5px;
-}
-
-
-.img-capa{
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-}
-
-.img-capa:hover{
-    filter: saturate(1);
-}
-
-.atualizacao{
-    font-size: 12px;
-    text-align: end;
-    font-style: italic;
-}
-
-.testCard h2{
-    margin: 10px;
-}
-
-.tituloSquare{
-    text-align: center;
-    height: 52px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.tituloSquare h2{
-    margin: 0 auto;
-}   
-
-.year{
-    font-size: 16px;
-}
-
-.movieSquare{
-    height: 62px;
-    overflow: hidden;
-}
-
-.movieDescription{
-    text-align: justify;
-    font-size: 14px;
-}
-
-.genre{
-    font-family: cursive;
-}
-
-
-.genre a{
-    text-decoration: none;
-    color: black;
-}
-
-.genre a:hover{
-    color: rgb(27, 27, 117);
-    font-weight: bold;
-}
-
-.comentarioSquare{
-    height: 33px;
-    overflow: hidden;
-   
-    
-}
-
-.comentarioSquare p{
-    display: inline;
-    font-size: 15px;
-    color: rgb(0, 132, 255); 
-    margin: 0 0; 
-    text-align: end;
-}
-
-.grade{
-    font-weight: bold;
-}
-
-.plus{
-    width: 13px!important;
-    padding-right: 10px;
-}
-
-.card-movieItem p{
-    margin-top: 6px;
-    margin-bottom: 5px;
-}
 
 
 
@@ -358,15 +221,7 @@ input, textarea, select{
     .movieItemRegister{
         width: 100%;
     }
-    .card-movieItem{
-        width: 50%;
-        margin: 0 auto;
-        margin-bottom: 15px;
-    }
 
-    .meus-filmes{
-        height: 480px ;
-    }
 
     .entrar{
         margin-bottom: 15px;
@@ -396,16 +251,6 @@ input, textarea, select{
     .movieItemRegister{
         width: 100%;
         
-    }
-    .card-movieItem{
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 15px;
-        
-    }
-
-    .meus-filmes{
-        height: 500px ;
     }
 
     .entrar{

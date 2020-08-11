@@ -14,6 +14,7 @@ require_once('php/cardFormulation.php');
     <title>Meus Filmes</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-cardMovie.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -117,13 +118,11 @@ require_once('php/cardFormulation.php');
         </section>
 
 
-        <div class="filmes">
-
-
+        <section class="filmes">
 
             <?php
             foreach ($array_card as $dados) {
-                echo "<section class='card-movieItem meus-filmes'>";
+                echo "<div class='card-movieItem'>";
                 echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
                 echo "<p class='atualizacao'>15/07/2020</p>";
                 echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
@@ -148,12 +147,12 @@ require_once('php/cardFormulation.php');
                     </form>
                 </div>
             <?php
-                echo "</section>";
+                echo "</div>";
             }
             ?>
 
             <!-- MODELO -->
-            <section class="card-movieItem meus-filmes">
+            <div class="card-movieItem">
                 <img class="img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
                 <p class="atualizacao">15/07/2020</p>
                 <div class='tituloSquare'>
@@ -182,9 +181,9 @@ require_once('php/cardFormulation.php');
                     </form>
                 </div>
 
-            </section>
+            </div>
             <!-- FIM DO MODELO -->
-        </div>
+        </section>
 
     </main>
 
