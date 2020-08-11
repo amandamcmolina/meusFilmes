@@ -8,7 +8,7 @@
 
 .card-movieItem{
     width: 29%;
-    height: 485px;
+    height: 475px;
     text-align: center;
     background-color: white;
     padding: 13px;
@@ -35,12 +35,9 @@
     bottom: 5px;
     display: flex;
     flex-direction: row;
+    width: 118px;
+    justify-content: space-between;
 }
-
-.edit{
-    margin-right: 5px;
-}
-
 
 .img-capa{
     width: 100%;
@@ -48,50 +45,31 @@
     object-fit: cover;
 }
 
-.img-capa:hover{
-    filter: saturate(1);
-}
-
-.atualizacao{
+.data-atualizacao{ 
     font-size: 12px;
-    text-align: end;
     font-style: italic;
 }
 
-.testCard h2{
-    margin: 10px;
-}
-
 .tituloSquare{
-    text-align: center;
     height: 52px;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
 
-.tituloSquare h2{
-    margin: 0 auto;
-}   
-
 .year{
     font-size: 16px;
 }
 
+/* descricao */
 .movieSquare{
     height: 62px;
     overflow: hidden;
 }
 
 .movieDescription{
-    text-align: center;
     font-size: 14px;
 }
-
-.genre{
-    font-family: cursive;
-}
-
 
 .genre a{
     text-decoration: none;
@@ -103,28 +81,40 @@
     font-weight: bold;
 }
 
+.atoresSquare{
+    height: 23px;
+    overflow: hidden;   
+}
+
+.direcaoSquare{
+    height: 23px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
 .comentarioSquare{
     height: 33px;
-    overflow: hidden;
-   
-    
+    overflow: hidden;   
+}
+
+.plus{
+    width: 13px!important;
+    padding-right: 10px;
 }
 
 .comentarioSquare p{
     display: inline;
     font-size: 15px;
     color: rgb(0, 132, 255); 
-    margin: 0 0; 
-    text-align: end;
+}
+
+.gradeSquare{
+    height: 25px;
+    overflow: hidden; 
 }
 
 .grade{
     font-weight: bold;
-}
-
-.plus{
-    width: 13px!important;
-    padding-right: 10px;
 }
 
 .card-movieItem p{
@@ -134,26 +124,31 @@
 
 
 @media screen and (max-width: 1030px ) {
-    
     .card-movieItem{
-        width: 50%;
+        width: 45%;
         margin: 0 auto;
         margin-bottom: 15px;
-        height: 480px;
+        height: 475px;
     }
-
-
 }
-
-    
-
+  
 @media screen and (max-width: 550px ) {
     
     .card-movieItem{
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         margin-bottom: 15px;
-        height: 500px ;
+        height: 495px ;
     }  
+
+    .atoresSquare{
+        height: 33px;
+        overflow: hidden;   
+    }
+
+    .direcaoSquare{
+        height: 40px;
+        overflow: hidden;
+    }
 
 }

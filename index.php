@@ -124,18 +124,18 @@ require_once('php/cardFormulation.php');
             foreach ($array_card as $dados) {
                 echo "<div class='card-movieItem'>";
                 echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
-                echo "<p class='atualizacao'>15/07/2020</p>";
+                echo "<p class='data-atualizacao'>15/07/2020</p>";
                 echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
                 echo $dados['titulo'];
                 echo "</h2></div>";
                 echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
                 echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
                 echo "<p class='genre'> <a href='#'>Gênero</a></p>";
-                echo "<p class='principalsActors'>AtorUm / AtorDois</p>";
-                echo "<p class='director'>Direção   : " . $dados['diretor'] . "</p>";
+                echo "<div class='atoresSquare'><p class='principalsActors'>AtorUm / AtorDois</p></div>";
+                echo "<div class='direcaoSquare'><p class='director'>Direção   : " . $dados['diretor'] . "</p></div>";
                 echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
                 echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
-                echo "<p class='grade'>Nota: " . $dados['nota'] . " </p>"; ?>
+                echo "<div class='gradeSquare'><p class='grade'>Nota: " . $dados['nota'] . " </p></div>"; ?>
                 <div class='edit-delete'>
                     <!-- <form action="php/editMovie.php" method="POST" >
                         <input type="hidden" name="id_up" value=""> -->
@@ -154,7 +154,7 @@ require_once('php/cardFormulation.php');
             <!-- MODELO -->
             <div class="card-movieItem">
                 <img class="img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
-                <p class="atualizacao">15/07/2020</p>
+                <p class="data-atualizacao">15/07/2020</p>
                 <div class='tituloSquare'>
                     <h2>Dirty Dancing</h2>
                 </div>
@@ -165,15 +165,22 @@ require_once('php/cardFormulation.php');
                         verdadeiro amor em um dançarino. </p>
                 </div>
                 <p class="genre"> <a href="#"> Romance</a></p>
-                <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
-                <p class="director">Direção: Emile Ardolino</p>
+                <div class="atoresSquare">
+                    <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
+                </div>
+                <div class="direcaoSquare">
+                    <p class="director">Direção: Emile Ardolino</p>
+                </div>
+                
                 <div class="comentarioSquare">
                     <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
                     <p class="coments">Top 10 dos meus filmes
                         preferidos</p>
                 </div>
-
-                <p class="grade"> Nota: 10</p>
+                <div class="gradeSquare">
+                    <p class="grade"> Nota: 10</p>
+                </div>
+                
                 <div class='edit-delete'>
                     <input class='edit btn' type='button' value='editar'>
                     <form action="php/deleteMovie.php" method="POST" >
