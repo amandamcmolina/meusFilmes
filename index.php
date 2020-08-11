@@ -71,7 +71,7 @@ require_once('php/cardFormulation.php');
     </div>
 
     <main>
-       
+
         <div class="addPrimeiroFilme">
             <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
         </div>
@@ -80,7 +80,9 @@ require_once('php/cardFormulation.php');
                 <span class="closeMovie">&times;</span>
                 <form action="php/addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
-                    <input type="text" id="titulo" name="titulo" maxlength="36" value="<?php if(isset($resultado)){echo $resultado['titulo'];} ?>"><br>
+                    <input type="text" id="titulo" name="titulo" maxlength="36" value="<?php if (isset($resultado)) {
+                                                                                            echo $resultado['titulo'];
+                                                                                        } ?>"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3" maxlength="137"></textarea><br>
 
@@ -121,35 +123,33 @@ require_once('php/cardFormulation.php');
         <section class="filmes">
 
             <?php
-            foreach ($array_card as $dados) {
-                echo "<div class='card-movieItem'>";
-                echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
-                echo "<p class='data-atualizacao'>15/07/2020</p>";
-                echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
-                echo $dados['titulo'];
-                echo "</h2></div>";
-                echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
-                echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
-                echo "<p class='genre'> <a href='#'>Gênero</a></p>";
-                echo "<div class='atoresSquare'><p class='principalsActors'>AtorUm / AtorDois</p></div>";
-                echo "<div class='direcaoSquare'><p class='director'>Direção   : " . $dados['diretor'] . "</p></div>";
-                echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
-                echo "<div class='gradeSquare'><p class='grade'>Nota: " . $dados['nota'] . " </p></div>"; ?>
-                <div class='edit-delete'>
-                    <!-- <form action="php/editMovie.php" method="POST" >
-                        <input type="hidden" name="id_up" value=""> -->
+                foreach ($array_card as $dados) {
+                    echo "<div class='card-movieItem'>";
+                    echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
+                    echo "<p class='data-atualizacao'>15/07/2020</p>";
+                    echo "<div class='tituloSquare'><h2 class='tituloFinal'>" . $dados['titulo'] . "</h2></div>";
+                    echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
+                    echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
+                    echo "<p class='genre'> <a href='#'>Gênero</a></p>";
+                    echo "<div class='atoresSquare'><p class='principalsActors'>AtorUm / AtorDois</p></div>";
+                    echo "<div class='direcaoSquare'><p class='director'>Direção: " . $dados['diretor'] . "</p></div>";
+                    echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                    echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
+                    echo "<div class='gradeSquare'><p class='grade'>Nota: " . $dados['nota'] . " </p></div>"; ?>
+                    <div class='edit-delete'>
+                        <!-- <form action="php/editMovie.php" method="POST" >
+                            <input type="hidden" name="id_up" value=""> -->
                         <input class='edit btn btn-edit' type='submit' value="editar">
-                    <!-- </form> -->
-                    <form action="php/deleteMovie.php" method="POST" >
-                        <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
-                        <input class='delete btn' type='submit' value='excluir'>
-                    </form>
-                </div>
-            <?php
-                echo "</div>";
-            }
-            ?>
+                        <!-- </form> -->
+                        <form action="php/deleteMovie.php" method="POST">
+                            <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
+                            <input class='delete btn' type='submit' value='excluir'>
+                        </form>
+                    </div>
+                    <?php
+                        echo "</div>";
+                }
+                    ?>
 
             <!-- MODELO -->
             <div class="card-movieItem">
@@ -171,7 +171,7 @@ require_once('php/cardFormulation.php');
                 <div class="direcaoSquare">
                     <p class="director">Direção: Emile Ardolino</p>
                 </div>
-                
+
                 <div class="comentarioSquare">
                     <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
                     <p class="coments">Top 10 dos meus filmes
@@ -180,10 +180,10 @@ require_once('php/cardFormulation.php');
                 <div class="gradeSquare">
                     <p class="grade"> Nota: 10</p>
                 </div>
-                
+
                 <div class='edit-delete'>
                     <input class='edit btn' type='button' value='editar'>
-                    <form action="php/deleteMovie.php" method="POST" >
+                    <form action="php/deleteMovie.php" method="POST">
                         <input class='delete btn' type='submit' value='excluir'>
                     </form>
                 </div>

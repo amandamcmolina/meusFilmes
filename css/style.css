@@ -1,3 +1,4 @@
+/* tags generos e atores */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 .container, .container-genero {
     width: 80%; 
@@ -51,7 +52,8 @@
 }
 
 body{
-    background-color: rgb(236, 231, 231);
+    /* background-color: rgb(236, 231, 231); */
+    background-image: linear-gradient(to top, rgb(184, 179, 179), #fff 85%);
 }
 
 .cabecalho{
@@ -61,7 +63,7 @@ body{
     margin: 0 auto;
     padding: 20px 0 20px 0;
     border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(128, 124, 124, 0.77);
+    /* box-shadow: 4px 4px 4px rgba(128, 124, 124, 0.77); */
 }
 
 .cabecalho p{
@@ -154,7 +156,6 @@ input, textarea, select{
 }
 
 .userRegisterForm input{
-    /* margin: 10px 0 10px 0; */
     width: 70%; 
     outline: none;
 }
