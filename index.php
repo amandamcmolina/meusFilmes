@@ -73,7 +73,8 @@ require_once('php/cardFormulation.php');
     <main>
 
         <div class="addPrimeiroFilme">
-            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
+            <!-- <input type="button" id="myBtnMovie"  class="btn btn-addFilme" > -->
+            <a href="#" id="myBtnMovie"  class="btn btn-addFilme"><img class='teste' src="img/addFilme.png" alt=""></a>
         </div>
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">

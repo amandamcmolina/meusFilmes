@@ -1,5 +1,8 @@
 /* tags generos e atores */
+
+
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 .container, .container-genero {
     width: 80%; 
     text-align: center;
@@ -175,8 +178,26 @@ input, textarea, select{
     padding: 7px;
 }
 
+
 .addPrimeiroFilme{
     text-align: center;
+}
+
+#myBtnMovie{
+    background-color: white!important;
+    height: 100px;
+    box-shadow: none;
+}
+
+.teste{
+    width: 35px;
+    margin-top: 10px;
+    border-radius: 50%;
+    height: 35px;
+}
+
+.teste:hover{
+    background-color: rgb(197, 182, 182);
 }
 
 .btn-addFilme{
