@@ -51,7 +51,7 @@
 }
 
 body{
-    background-color: #EEE;
+    background-color: rgb(236, 231, 231);
 }
 
 .cabecalho{
@@ -226,17 +226,18 @@ input, textarea, select{
     /* margin: 0 auto;  */
     background-color: white;
     padding: 12px;
-    margin-right: 7px;
+    margin-right: 9px;
     border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 9px 7px 5px rgba(128, 124, 124, 0.77);
+    box-shadow: 5px 5px 2px rgba(128, 124, 124, 0.2);
     filter: saturate(0.6);
 }
 
 .card-movieItem:hover{
-    background-color: rgb(236, 217, 217);
+    
     filter: saturate(1.1);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+    box-shadow: 6px 6px 3px rgba(128, 124, 124, 0.70);
     /* transition-delay: 0.1s; */
 }
 
@@ -404,7 +405,7 @@ input, textarea, select{
     }
 
     .meus-filmes{
-        height: 570px ;
+        height: 500px ;
     }
 
     .entrar{

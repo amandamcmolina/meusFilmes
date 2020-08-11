@@ -1,5 +1,7 @@
 <?php
 require_once('php/cardFormulation.php');
+// require_once('php/editMovie.php');
+
 
 ?>
 
@@ -68,12 +70,7 @@ require_once('php/cardFormulation.php');
     </div>
 
     <main>
-        <?php
-            if($msg){//flash message
-                echo "<h2>".$msg."</h2>";
-            }
-
-        ?>
+       
         <div class="addPrimeiroFilme">
             <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
         </div>
@@ -82,7 +79,7 @@ require_once('php/cardFormulation.php');
                 <span class="closeMovie">&times;</span>
                 <form action="php/addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
-                    <input type="text" id="titulo" name="titulo" maxlength="36"><br>
+                    <input type="text" id="titulo" name="titulo" maxlength="36" value="<?php if(isset($resultado)){echo $resultado['titulo'];} ?>"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3" maxlength="137"></textarea><br>
 
@@ -141,7 +138,10 @@ require_once('php/cardFormulation.php');
                 echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
                 echo "<p class='grade'>Nota: " . $dados['nota'] . " </p>"; ?>
                 <div class='edit-delete'>
-                    <input class='edit btn' type='button' value='editar'>
+                    <!-- <form action="php/editMovie.php" method="POST" >
+                        <input type="hidden" name="id_up" value=""> -->
+                        <input class='edit btn btn-edit' type='submit' value="editar">
+                    <!-- </form> -->
                     <form action="php/deleteMovie.php" method="POST" >
                         <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
                         <input class='delete btn' type='submit' value='excluir'>
@@ -198,6 +198,7 @@ require_once('php/cardFormulation.php');
     <script src="js/autoCompleteGeneros.js"></script>
     <script src="js/tagInputActor.js"></script>
     <script src="js/help.js"></script>
+    <script src="js/editMovie.js"></script>
 
 
 </body>
