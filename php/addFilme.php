@@ -31,12 +31,15 @@ if($novoFilme->checkRegister($db)){
     $msg = "Já existe";
 }else{
     $novoFilme->registerMovie($db);
-    $msg = "Filme criado com sucesso";
+    echo "<script type='javascript'>alert('Email enviado com Sucesso!');</script>";
+    // echo "javascript:window.location='index.php';</script>";
+    // $msg = "Filme criado com sucesso";
 }
 
 
 
-header('location:../index.php?msg='.$msg);
+// header('location:../index.php?msg='.$msg);
+header('location:../index.php');
 
 
 

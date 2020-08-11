@@ -131,13 +131,10 @@
             $idTitulo = $db->prepare("SELECT id FROM movies WHERE titulo = :ti");
             $idTitulo->bindValue(":ti", $this->titulo);
             $idTitulo->execute();
-            // if($idTitulo->rowCount() > 0){
-            //     return false;
-            // }else{
-            //     $this->registerMovie($db);
-            // }
             return $idTitulo->rowCount() > 0;
-        }     
+        }
+        
+       
     }
 
     

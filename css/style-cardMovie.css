@@ -1,0 +1,154 @@
+.filmes{
+    width: 73%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-movieItem{
+    width: 29%;
+    height: 475px;
+    text-align: center;
+    background-color: white;
+    padding: 13px;
+    margin-right: 9px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 5px 5px 2px rgba(128, 124, 124, 0.2);
+    filter: saturate(0.6);
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.card-movieItem:hover{
+    filter: saturate(1.1);
+    transition-duration: 0.3s;
+    box-shadow: 6px 6px 3px rgba(128, 124, 124, 0.70);
+    /* transition-delay: 0.1s; */
+}
+
+.edit-delete{
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    width: 118px;
+    justify-content: space-between;
+}
+
+.img-capa{
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.data-atualizacao{ 
+    font-size: 12px;
+    font-style: italic;
+}
+
+.tituloSquare{
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.year{
+    font-size: 16px;
+}
+
+/* descricao */
+.movieSquare{
+    height: 62px;
+    overflow: hidden;
+}
+
+.movieDescription{
+    font-size: 14px;
+}
+
+.genre a{
+    text-decoration: none;
+    color: black;
+}
+
+.genre a:hover{
+    color: rgb(27, 27, 117);
+    font-weight: bold;
+}
+
+.atoresSquare{
+    height: 23px;
+    overflow: hidden;   
+}
+
+.direcaoSquare{
+    height: 23px;
+    overflow: hidden;
+    margin-bottom: 3px;
+}
+
+.comentarioSquare{
+    height: 33px;
+    overflow: hidden;   
+}
+
+.plus{
+    width: 13px!important;
+    padding-right: 10px;
+}
+
+.comentarioSquare p{
+    display: inline;
+    font-size: 15px;
+    color: rgb(0, 132, 255); 
+}
+
+.gradeSquare{
+    height: 25px;
+    overflow: hidden; 
+}
+
+.grade{
+    font-weight: bold;
+}
+
+.card-movieItem p{
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 1030px ) {
+    .card-movieItem{
+        width: 45%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        height: 475px;
+    }
+}
+  
+@media screen and (max-width: 550px ) {
+    
+    .card-movieItem{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        height: 495px ;
+    }  
+
+    .atoresSquare{
+        height: 33px;
+        overflow: hidden;   
+    }
+
+    .direcaoSquare{
+        height: 40px;
+        overflow: hidden;
+    }
+
+}

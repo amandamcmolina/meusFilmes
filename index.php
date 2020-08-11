@@ -1,5 +1,7 @@
 <?php
 require_once('php/cardFormulation.php');
+// require_once('php/editMovie.php');
+
 
 ?>
 
@@ -12,6 +14,7 @@ require_once('php/cardFormulation.php');
     <title>Meus Filmes</title>
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-cardMovie.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
@@ -68,21 +71,19 @@ require_once('php/cardFormulation.php');
     </div>
 
     <main>
-        <?php
-            if($msg){//flash message
-                echo "<h2>".$msg."</h2>";
-            }
 
-        ?>
         <div class="addPrimeiroFilme">
-            <input type="button" id="myBtnMovie" class="btn btn-addFilme" value="Adicionar filme">
+            <!-- <input type="button" id="myBtnMovie"  class="btn btn-addFilme" > -->
+            <a href="#" id="myBtnMovie"  class="btn btn-addFilme"><img class='teste' src="img/addFilme.png" alt=""></a>
         </div>
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">
                 <span class="closeMovie">&times;</span>
                 <form action="php/addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
-                    <input type="text" id="titulo" name="titulo" maxlength="36"><br>
+                    <input type="text" id="titulo" name="titulo" maxlength="36" value="<?php if (isset($resultado)) {
+                                                                                            echo $resultado['titulo'];
+                                                                                        } ?>"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3" maxlength="137"></textarea><br>
 
@@ -120,42 +121,41 @@ require_once('php/cardFormulation.php');
         </section>
 
 
-        <div class="filmes">
-
-
+        <section class="filmes">
 
             <?php
-            foreach ($array_card as $dados) {
-                echo "<section class='card-movieItem meus-filmes'>";
-                echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
-                echo "<p class='atualizacao'>15/07/2020</p>";
-                echo "<div class='tituloSquare'><h2 class='tituloFinal'>";
-                echo $dados['titulo'];
-                echo "</h2></div>";
-                echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
-                echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
-                echo "<p class='genre'> <a href='#'>Gênero</a></p>";
-                echo "<p class='principalsActors'>AtorUm / AtorDois</p>";
-                echo "<p class='director'>Direção   : " . $dados['diretor'] . "</p>";
-                echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
-                echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
-                echo "<p class='grade'>Nota: " . $dados['nota'] . " </p>"; ?>
-                <div class='edit-delete'>
-                    <input class='edit btn' type='button' value='editar'>
-                    <form action="php/deleteMovie.php" method="POST" >
-                        <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
-                        <input class='delete btn' type='submit' value='excluir'>
-                    </form>
-                </div>
-            <?php
-                echo "</section>";
-            }
-            ?>
+                foreach ($array_card as $dados) {
+                    echo "<div class='card-movieItem'>";
+                    echo "<img class='img-capa' alt='capa do filme' src=" . $dados['url_capa'] . ">";
+                    echo "<p class='data-atualizacao'>15/07/2020</p>";
+                    echo "<div class='tituloSquare'><h2 class='tituloFinal'>" . $dados['titulo'] . "</h2></div>";
+                    echo "<p class='year'>" . $dados['anoEstreia'] . "</p>";
+                    echo "<div class='movieSquare'><p class='movieDescription'>" . $dados['descricao'] . "</p></div>";
+                    echo "<p class='genre'> <a href='#'>Gênero</a></p>";
+                    echo "<div class='atoresSquare'><p class='principalsActors'>AtorUm / AtorDois</p></div>";
+                    echo "<div class='direcaoSquare'><p class='director'>Direção: " . $dados['diretor'] . "</p></div>";
+                    echo "<div class='comentarioSquare'><img class='plus' src='img/plus.png' alt='Comentário Pessoal'>";
+                    echo "<p class='coments'>" . $dados['comentario'] . " </p></div>";
+                    echo "<div class='gradeSquare'><p class='grade'>Nota: " . $dados['nota'] . " </p></div>"; ?>
+                    <div class='edit-delete'>
+                        <!-- <form action="php/editMovie.php" method="POST" >
+                            <input type="hidden" name="id_up" value=""> -->
+                        <input class='edit btn btn-edit' type='submit' value="editar">
+                        <!-- </form> -->
+                        <form action="php/deleteMovie.php" method="POST">
+                            <input type="hidden" name="id" value="<?php echo $dados['id'] ?>">
+                            <input class='delete btn' type='submit' value='excluir'>
+                        </form>
+                    </div>
+                    <?php
+                        echo "</div>";
+                }
+                    ?>
 
             <!-- MODELO -->
-            <section class="card-movieItem meus-filmes">
+            <div class="card-movieItem">
                 <img class="img-capa" src="img/filmeUm.jpg" alt="dirtyDancing">
-                <p class="atualizacao">15/07/2020</p>
+                <p class="data-atualizacao">15/07/2020</p>
                 <div class='tituloSquare'>
                     <h2>Dirty Dancing</h2>
                 </div>
@@ -166,25 +166,32 @@ require_once('php/cardFormulation.php');
                         verdadeiro amor em um dançarino. </p>
                 </div>
                 <p class="genre"> <a href="#"> Romance</a></p>
-                <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
-                <p class="director">Direção: Emile Ardolino</p>
+                <div class="atoresSquare">
+                    <p class="principalsActors">Patrick Swayse / Jennifer Grey</p>
+                </div>
+                <div class="direcaoSquare">
+                    <p class="director">Direção: Emile Ardolino</p>
+                </div>
+
                 <div class="comentarioSquare">
                     <img class="plus" src="img/plus.png" alt="Comentário Pessoal">
                     <p class="coments">Top 10 dos meus filmes
                         preferidos</p>
                 </div>
+                <div class="gradeSquare">
+                    <p class="grade"> Nota: 10</p>
+                </div>
 
-                <p class="grade"> Nota: 10</p>
                 <div class='edit-delete'>
                     <input class='edit btn' type='button' value='editar'>
-                    <form action="php/deleteMovie.php" method="POST" >
+                    <form action="php/deleteMovie.php" method="POST">
                         <input class='delete btn' type='submit' value='excluir'>
                     </form>
                 </div>
 
-            </section>
+            </div>
             <!-- FIM DO MODELO -->
-        </div>
+        </section>
 
     </main>
 
@@ -198,6 +205,7 @@ require_once('php/cardFormulation.php');
     <script src="js/autoCompleteGeneros.js"></script>
     <script src="js/tagInputActor.js"></script>
     <script src="js/help.js"></script>
+    <script src="js/editMovie.js"></script>
 
 
 </body>

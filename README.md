@@ -1,14 +1,14 @@
 # meusFilmes
 
-    ## TopFilmes
-        1. Add to the Top
-            * button
-        2. grade
-        3. stars
+### Goals
+1. To create a personal movies'site
+2. In the future: to open it for other users 
 
-    ## Movie indication
-        1. List of movies
-        2. grade
-        3. **edit**
-    
+### marks
+1. Top movies
+2. Filters
+3. Organized and fresf template
+
+
+
 
