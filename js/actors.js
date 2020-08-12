@@ -1,12 +1,5 @@
-// $(function () {
-//     $("#teste_autoComplete").autocomplete({
-//         source: ["Amanda", "Maria", "Costa", "Molina"],
-//         minLength: 2
-//     });
-// });
-
+// TAGS ATORES
 var tagContainer = document.querySelector('.tag-container');
-
 var input = document.querySelector('.tag-container input');
 var tags = []; // [oi, oi, java]
 
