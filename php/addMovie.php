@@ -40,11 +40,3 @@ if($novoFilme->checkRegister($db)){
 
 // header('location:../index.php?msg='.$msg);
 header('location:../index.php');
-
-
-
-
-
-
-// $json = json_encode($novoFilme);
-// file_put_contents('movies.json', $json);
