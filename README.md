@@ -10,5 +10,6 @@
 3. Organized and fresf template
 
 
-
+![Screenshot](img/meusfilmes.png)
+![Screenshot](img/meusfilmesResponsivo.png)
 
