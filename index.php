@@ -18,7 +18,7 @@ require_once('php/cardFormulation.php');
     <div class="cabecalho">
         <div class="entrar">
             <a class="login" id="myBtn" href="#">Cadastrar</a>
-
+            <!-- Modal Register User -->
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -38,10 +38,9 @@ require_once('php/cardFormulation.php');
                     </form>
                 </div>
             </div>
-
-
+            <!-- Fim modal Register User -->
             <a class="login" id="myBtnLogin" href="#">Login</a>
-
+            <!-- Modal Login -->
             <div id="myModalLogin" class="modalLogin">
                 <div class="modal-contentLogin">
                     <span class="closeLogin">&times;</span>
@@ -57,49 +56,43 @@ require_once('php/cardFormulation.php');
                     </form>
                 </div>
             </div>
-
+            <!-- Fim modal Login -->
         </div>
         <h1>Meus Filmes</h1>
-
         <hr>
         <p>Minha lista personaliza de filmes</p>
     </div>
 
     <main>
-
         <div class="addPrimeiroFilme">
             <!-- <input type="button" id="myBtnMovie"  class="btn btn-addFilme" > -->
             <a href="#" id="myBtnMovie"  class="btn btn-addFilme"><img class='teste' src="img/addFilme.png" alt=""></a>
         </div>
+        <!-- Modal Register Movie -->
         <section class="movieItemRegister modalMovie" id="myModalMovie">
             <div class="modal-contentMovie">
                 <span class="closeMovie">&times;</span>
                 <form action="php/addFilme.php" method="post" enctype="multipart/form-data">
                     <label for="titulo">Título do Filme:</label><br>
-                    <input type="text" id="titulo" name="titulo" maxlength="36" value="<?php if (isset($resultado)) {
-                                                                                            echo $resultado['titulo'];
-                                                                                        } ?>"><br>
+                    <input type="text" id="titulo" name="titulo" maxlength="36"><br>
                     <label for="descricao">Descrição:</label><br>
                     <textarea name="descricao" id="descricao" cols="30" rows="3" maxlength="137"></textarea><br>
-
-
+                    <!-- Generos tags -->
                     <label for="genero">Gênero:</label><br>
                     <div class="container-genero">
                         <div class="tag-container-genero">
                             <input type="text" id="g_autocomplete" name="genero"><br>
                         </div>
                     </div>
-
-
+                    <!-- Fim generos tags -->
+                    <!-- atores tags -->
                     <label for="atoresPrincipais">Atores Principais:</label><br>
                     <div class="container">
                         <div class="tag-container">
                             <input type="text" id="atoresPrincipais" name="atores">
                         </div>
                     </div>
-
-
-
+                    <!-- fim atores tags -->
                     <label for="diretor">Diretor:</label><br>
                     <input type="text" id="diretor" name="diretor"><br>
                     <label for="ano">Ano de estreia:</label><br>
@@ -114,10 +107,9 @@ require_once('php/cardFormulation.php');
                 </form>
             </div>
         </section>
-
-
+        <!-- Fim register movie -->
+        <!-- Cards Movies -->
         <section class="filmes">
-
             <?php
                 foreach ($array_card as $dados) {
                     echo "<div class='card-movieItem'>";
@@ -182,6 +174,7 @@ require_once('php/cardFormulation.php');
             </div>
             <!-- FIM DO MODELO -->
         </section>
+        <!-- Fim cards Movies -->
     </main>
     <!-- scripts modal -->
     <script src="js/loginModal.js"></script>
