@@ -1,6 +1,4 @@
 <?php
-    
-
     class Movie
     {
             public $titulo;
@@ -46,9 +44,6 @@
 
         public function setTitulo($titulo)
         {
-            // if(mb_strlen($titulo) > 35){
-            //     throw new Exception("Seu título não pode ter mais de 35 caracteres!");
-            // }
             $this->titulo = $titulo;
         }
 
@@ -69,9 +64,6 @@
 
         public function setAno($ano) 
         {
-            // if($this->anoEstreia < 1800 || $this->anoEstreia > 2030){
-            //     throw new Exception("Ano deve ter 4 caracteres.", 100);
-            // }
             $this->ano = $ano;
         }
 
@@ -82,9 +74,6 @@
 
         public function setNota($nota)
         {
-            // if($this->nota > 10 || $this->nota <0){
-            //     throw new Exception("A nota deve estar entre 0 e 10.", 200);
-            // }
             $this->nota = $nota;
         }
 
@@ -114,7 +103,6 @@
         }
 
         public function registerMovie($db){
-            
             $query = $db->prepare("INSERT INTO movies (titulo, descricao, diretor, anoEstreia, comentario, nota, url_capa) VALUES (:t, :de, :di, :a, :c, :n, :u)");
 
             $query->bindValue(":t", $this->titulo);

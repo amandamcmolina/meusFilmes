@@ -1,5 +1,7 @@
 <?php
 
+
+
 include('connection.php');
 
 $genero = filter_input(INPUT_GET, 'term', FILTER_SANITIZE_STRING); //Guardando em uma variável a pesquisa

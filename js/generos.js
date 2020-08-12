@@ -1,17 +1,3 @@
-// //SELECT GÊNEROS
-// let generos = ["Ação", "Animação", "Aventura", "Comédia", "Comédia Romântica", "Musical",   "Drama", "Ficção Cietífica", "Romance", "Suspense", "Terror"];
-// var select = document.getElementById("selecao-generos"); 
-
-//     for(var i = 0; i < generos.length; i++) {
-//         var genero = generos[i];
-//         var generoOption = document.createElement("option"); 
-//         generoOption.textContent = genero;   
-//         generoOption.value = genero; 
-//         select.appendChild(generoOption); 
-//     }
-
-
-
 //AUTOCOMPLETE  - JSON + MYSQL + PHP + jquery
 
 $(function () {
@@ -75,6 +61,25 @@ document.addEventListener('click', function (e) {
         addTagsGenero();
     }
 })
+
+
+//CANCELAR O ENTER NOS INPUTS
+$("input, select", "form") // busca input e select no form
+    .keypress(function (e) { // evento ao presionar uma tecla válida keypress
+
+        var k = e.which || e.keyCode; // pega o código do evento
+
+        if (k == 13) { // se for ENTER
+            e.preventDefault(); // cancela o submit
+            $(this)
+                .closest('tr') // seleciona a linha atual
+                .next() // seleciona a próxima linha
+                .find('input, select') // busca input ou select
+                .first() // seleciona o primeiro que encontrar
+                .focus(); // foca no elemento
+        }
+
+    });
 
 
 
