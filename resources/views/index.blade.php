@@ -1,64 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Filmes</title>
-    <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-cardMovie.css">
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-</head>
-<body>
-    <div class="cabecalho">
-        <div class="entrar">
-            <a class="login" id="myBtn" href="#">Cadastrar</a>
-            <!-- Modal Register User -->
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <form class="userRegisterForm" action="">
-                        <div class="titulocadastro">
-                            <h3>Cadastro do Usuário</h3><br>
-                        </div>
-                        <label for="name">Username</label><br>
-                        <input type="text" name="name" id="name"><br>
-                        <label for="email">Email</label><br>
-                        <input type="text" name="email" id="email"><br>
-                        <label for="password">Senha</label><br>
-                        <input type="password" name="password" id="password"><br>
-                        <label for="passwordCheck">Confirmar Senha</label><br>
-                        <input type="password" name="passwordCheck" id="passwordCheck"><br>
-                        <button class=" btn btn-userRegister">Confirmar</button>
-                    </form>
-                </div>
-            </div>
-            <!-- Fim modal Register User -->
-            <a class="login" id="myBtnLogin" href="#">Login</a>
-            <!-- Modal Login -->
-            <div id="myModalLogin" class="modalLogin">
-                <div class="modal-contentLogin">
-                    <span class="closeLogin">&times;</span>
-                    <form class="userRegisterForm" action="">
-                        <div class="titulocadastro">
-                            <h3>Login</h3><br>
-                        </div>
-                        <label for="userName">Username ou email</label><br>
-                        <input type="text" name="userName" id="userName"><br>
-                        <label for="userPassword">Senha</label><br>
-                        <input type="Password" name="userPassword" id="userPassword"><br>
-                        <button class=" btn btn-userRegister">Entrar</button>
-                    </form>
-                </div>
-            </div>
-            <!-- Fim modal Login -->
-        </div>
-        <h1>Meus Filmes</h1>
-        <hr>
-        <p>Minha lista personaliza de filmes</p>
-    </div>
+@extends('layouts.app')
 
+@section('title')
+    <title>Meus Filmes</title>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style-cardMovie.css') }}">
+    <link href="{{ asset('https://fonts.googleapis.com/css2?family=Epilogue&display=swap') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css') }}">
+@endsection
+
+@section('content')
     <main>
         <div class="addPrimeiroFilme">
             <!-- <input type="button" id="myBtnMovie"  class="btn btn-addFilme" > -->
@@ -143,7 +96,9 @@
         </section>
         <!-- Fim cards Movies -->
     </main>
-    <!-- scripts modal -->
+@endsection
+
+@section('js')
     <script src="js/loginModal.js"></script>
     <script src="js/registerUserModal.js"></script>
     <script src="js/registerMovieModal.js"></script>
@@ -153,5 +108,56 @@
     <script src="js/generos.js"></script>
     <script src="js/actors.js"></script>
     <script src="js/editMovie.js"></script>
-</body>
-</html>
+@endsection
+
+
+
+    {{-- <div class="cabecalho">
+        <div class="entrar">
+            <a class="login" id="myBtn" href="#">Cadastrar</a>
+            <!-- Modal Register User -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form class="userRegisterForm" action="">
+                        <div class="titulocadastro">
+                            <h3>Cadastro do Usuário</h3><br>
+                        </div>
+                        <label for="name">Username</label><br>
+                        <input type="text" name="name" id="name"><br>
+                        <label for="email">Email</label><br>
+                        <input type="text" name="email" id="email"><br>
+                        <label for="password">Senha</label><br>
+                        <input type="password" name="password" id="password"><br>
+                        <label for="passwordCheck">Confirmar Senha</label><br>
+                        <input type="password" name="passwordCheck" id="passwordCheck"><br>
+                        <button class=" btn btn-userRegister">Confirmar</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Fim modal Register User -->
+            <a class="login" id="myBtnLogin" href="#">Login</a>
+            <!-- Modal Login -->
+            <div id="myModalLogin" class="modalLogin">
+                <div class="modal-contentLogin">
+                    <span class="closeLogin">&times;</span>
+                    <form class="userRegisterForm" action="">
+                        <div class="titulocadastro">
+                            <h3>Login</h3><br>
+                        </div>
+                        <label for="userName">Username ou email</label><br>
+                        <input type="text" name="userName" id="userName"><br>
+                        <label for="userPassword">Senha</label><br>
+                        <input type="Password" name="userPassword" id="userPassword"><br>
+                        <button class=" btn btn-userRegister">Entrar</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Fim modal Login -->
+        </div>
+        <h1>Meus Filmes</h1>
+        <hr>
+        <p>Minha lista personaliza de filmes</p>
+    </div> --}}
+
+ 
