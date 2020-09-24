@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
+    <link href="{{ asset('css/applogado.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style-cardMovie.css') }}">
     <link href="{{ asset('https://fonts.googleapis.com/css2?family=Epilogue&display=swap') }}" rel="stylesheet">
@@ -8,7 +9,7 @@
 @endsection
 
 @section('content')
-    <main>
+    
         <div class="addPrimeiroFilme">
             <!-- <input type="button" id="myBtnMovie"  class="btn btn-addFilme" > -->
             <a href="#" id="myBtnMovie"  class="btn btn-addFilme"><img class='teste' src="{{ url('img/addFilme.png') }}" alt=""></a>
@@ -91,5 +92,17 @@
             <!-- FIM DO MODELO -->
         </section>
         <!-- Fim cards Movies -->
-    </main>
+    
+@endsection
+
+@section('js')
+    <script src="js/loginModal.js"></script>
+    <script src="js/registerUserModal.js"></script>
+    <script src="js/registerMovieModal.js"></script>
+    <!-- FIM scripts modal -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/generos.js"></script>
+    <script src="js/actors.js"></script>
+    <script src="js/editMovie.js"></script>
 @endsection

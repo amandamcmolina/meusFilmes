@@ -231,9 +231,7 @@ input, textarea, select{
 
 
 @media screen and (max-width: 1030px ) {
-    .cabecalho{
-        width: 55%;
-    }
+    
     .entrar{
         text-align: center;
         font-size: 1.3em;
@@ -261,9 +259,7 @@ input, textarea, select{
     
 
 @media screen and (max-width: 550px ) {
-    .cabecalho{
-        width: 75%;
-    }
+
     .entrar{
         text-align: center;
         font-size: 1.3em;
@@ -287,3 +283,86 @@ input, textarea, select{
 
    
 }
+
+/* FOOTER */
+footer{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* WELCOME */
+
+.sobre-meus-filmes{
+    /* background-color: white; */
+    text-align: center;
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+@media (min-width: 400px){
+    .sobre-meus-filmes img{
+        width: 95%;
+    }
+    .cabecalho{
+        width: 75%;
+    }
+}
+
+@media (min-width: 576px) {
+    .sobre-meus-filmes img{
+        width: 80%;
+    }
+    .cabecalho{
+        width: 75%;
+    }
+}
+
+@media (min-width: 768px) {
+    .sobre-meus-filmes img{
+        width: 95%;
+    }
+    .cabecalho{
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    .sobre-meus-filmes img{
+        width: 75%;
+    }
+    .cabecalho{
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sobre-meus-filmes img{
+        width: 65%;
+    }
+    .cabecalho{
+        width: 55%;
+    }
+}
+
+
+/* LOGIN */
+
+.caixa-login, .caixa-email{
+    padding-top: 100px;
+    padding-bottom: 110px;
+   
+}
+
+/* Filmes */
+
+.filmes{
+    padding-bottom: 40px;
+}
+
+
+
