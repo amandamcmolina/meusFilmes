@@ -17,12 +17,12 @@ class CreateMoviesTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('titulo')->nullable;
-            $table->text('descricao')->nullable;
-            $table->string('diretor')->nullable;
-            $table->year('ano')->nullable;
-            $table->text('comentario')->nullable;
-            $table->integer('nota')->nullable;
-            $table->text('url_foto')->nullable;
+            $table->text('descricao')->default("Olá");
+            $table->string('diretor')->default("Olá");
+            $table->year('ano')->default("0000");
+            $table->text('comentario')->default("Olá");
+            $table->integer('nota');
+            $table->text('url_foto')->default("Olá");
             $table->timestamps();
         });
     }
