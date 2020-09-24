@@ -5,10 +5,12 @@
 @endsection
 
 @section('css')
+    <link href="{{ asset('css/applogado.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style-cardMovie.css') }}">
     <link href="{{ asset('https://fonts.googleapis.com/css2?family=Epilogue&display=swap') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css') }}">
+    
 @endsection
 
 @section('content')

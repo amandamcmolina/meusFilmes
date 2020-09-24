@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
+@section('css')
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+
+    <div class="row justify-content-center caixa-email">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Reset Password') }}</div>
@@ -43,5 +47,5 @@
             </div>
         </div>
     </div>
-</div>
+
 @endsection
